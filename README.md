@@ -1,1 +1,1 @@
-# cs147-potluck
+# cs147-potluck-ios-app
