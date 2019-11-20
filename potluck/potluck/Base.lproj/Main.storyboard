@@ -132,7 +132,7 @@
         <!--Profile-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ProfileViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -670,10 +670,10 @@
             </objects>
             <point key="canvasLocation" x="2825" y="-282"/>
         </scene>
-        <!--View Controller-->
+        <!--My Character Buttons View Controller-->
         <scene sceneID="zEK-Nu-j4d">
             <objects>
-                <viewController id="fe7-o5-cLY" sceneMemberID="viewController">
+                <viewController id="fe7-o5-cLY" customClass="MyCharacterButtonsViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sTJ-cl-OzH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -714,6 +714,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iSl-az-apq"/>
                     </view>
+                    <connections>
+                        <outlet property="character1" destination="COi-uz-Lc6" id="bf4-2i-YfM"/>
+                        <outlet property="character2" destination="Zqa-DL-ge5" id="4MQ-Hy-Usj"/>
+                        <outlet property="character3" destination="LCn-CV-x1e" id="HQ8-CI-DCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycX-4r-Xug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
