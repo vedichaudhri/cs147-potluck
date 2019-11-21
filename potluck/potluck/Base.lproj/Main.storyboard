@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fbz-uF-a4C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wu6-xs-Hd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -202,6 +202,7 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="2lo-bQ-KP1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,7 +688,7 @@
                                 <state key="normal" image="CreateCharacterButton"/>
                                 <connections>
                                     <action selector="character1Pressed:" destination="fe7-o5-cLY" eventType="touchUpInside" id="ULd-Xs-uAR"/>
-                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter1" id="D7w-iL-9Zl"/>
+                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter1" id="pUg-qf-7ti"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCn-CV-x1e">
@@ -730,6 +731,9 @@
                         <outlet property="character1" destination="COi-uz-Lc6" id="bf4-2i-YfM"/>
                         <outlet property="character2" destination="Zqa-DL-ge5" id="4MQ-Hy-Usj"/>
                         <outlet property="character3" destination="LCn-CV-x1e" id="HQ8-CI-DCT"/>
+                        <segue destination="fbz-uF-a4C" kind="presentation" identifier="char1Profile" id="aQY-E5-AL6"/>
+                        <segue destination="fbz-uF-a4C" kind="presentation" identifier="char2Profile" id="5Cb-Ss-NrV"/>
+                        <segue destination="fbz-uF-a4C" kind="presentation" identifier="char3Profile" id="xC0-2E-P6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycX-4r-Xug" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -741,14 +745,14 @@
             <objects>
                 <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuo-We-pmf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-Vy-XqS">
-                                <rect key="frame" x="16" y="36" width="46" height="30"/>
+                                <rect key="frame" x="16" y="16" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-gN-sDB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-gN-sDB">
                                 <rect key="frame" x="122" y="65" width="130" height="117"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -756,7 +760,7 @@
                                     <constraint firstAttribute="width" constant="130" id="IaV-jj-H6E"/>
                                 </constraints>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIJ-DE-JQb">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIJ-DE-JQb">
                                 <rect key="frame" x="0.0" y="223" width="375" height="444"/>
                                 <connections>
                                     <segue destination="gGp-qC-8sN" kind="embed" id="5aM-MI-aIn"/>
@@ -797,7 +801,7 @@
                                 </constraints>
                                 <state key="normal" image="BackButton"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="presentation" id="pfQ-xn-Mh9"/>
+                                    <segue destination="9pv-A4-QxB" kind="presentation" identifier="" id="pfQ-xn-Mh9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopRight2Circles" translatesAutoresizingMaskIntoConstraints="NO" id="yOK-zO-HJQ">
@@ -827,7 +831,6 @@
                                     <constraint firstAttribute="width" constant="195" id="5TX-b2-yiR"/>
                                     <constraint firstAttribute="height" constant="36" id="zNN-cA-BMy"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -837,7 +840,6 @@
                                     <constraint firstAttribute="height" constant="36" id="IRR-Nl-Nj8"/>
                                     <constraint firstAttribute="width" constant="195" id="q7Q-hn-OSu"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -847,7 +849,6 @@
                                     <constraint firstAttribute="width" constant="195" id="JfS-TT-uk8"/>
                                     <constraint firstAttribute="height" constant="36" id="pcm-Ai-WCS"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -863,7 +864,6 @@
                                     <constraint firstAttribute="height" constant="32" id="XM4-f3-CUc"/>
                                     <constraint firstAttribute="width" constant="312" id="mj8-iU-F4Q"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -873,7 +873,6 @@
                                     <constraint firstAttribute="height" constant="32" id="YUa-s7-cm3"/>
                                     <constraint firstAttribute="width" constant="312" id="uah-sZ-Zdr"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -896,6 +895,10 @@
                                     <constraint firstAttribute="width" constant="84" id="gig-RW-a6K"/>
                                 </constraints>
                                 <state key="normal" image="CreateButton"/>
+                                <connections>
+                                    <action selector="createChar:" destination="itt-Bz-opI" eventType="touchUpInside" id="xqa-oJ-rxu"/>
+                                    <segue destination="9pv-A4-QxB" kind="presentation" identifier="profilePage" id="CXT-bW-WD6"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text=" Text here. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPt-6Z-cJF">
                                 <rect key="frame" x="25" y="558" width="312" height="125"/>
@@ -943,6 +946,13 @@
                         <viewLayoutGuide key="safeArea" id="dyb-hw-tdh"/>
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <outlet property="age" destination="qjG-hi-2Do" id="Dr8-Hh-wV3"/>
+                        <outlet property="firstName" destination="6aw-OK-3ew" id="YFh-nQ-ZzC"/>
+                        <outlet property="gender" destination="2Xf-2V-Us6" id="gbu-Ai-sZJ"/>
+                        <outlet property="lastName" destination="hRI-0p-goM" id="cwR-XD-PzJ"/>
+                        <outlet property="location" destination="tFW-6J-Xyg" id="m6t-we-jAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9h-Xr-vy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1015,6 +1025,7 @@
                             <constraint firstItem="c33-jm-08C" firstAttribute="leading" secondItem="SoG-86-hI7" secondAttribute="leadingMargin" constant="226" id="jHy-BF-pO7"/>
                             <constraint firstAttribute="bottomMargin" secondItem="c33-jm-08C" secondAttribute="bottom" constant="111" id="lmn-6u-gme"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="9gs-eG-ZES"/>
                     </view>
                     <size key="freeformSize" width="375" height="947"/>
                 </viewController>
@@ -1036,7 +1047,8 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5G7-nl-e8P"/>
+        <segue reference="pUg-qf-7ti"/>
+        <segue reference="xC0-2E-P6g"/>
         <segue reference="pfQ-xn-Mh9"/>
     </inferredMetricsTieBreakers>
 </document>

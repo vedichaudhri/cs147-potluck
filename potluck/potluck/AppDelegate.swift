@@ -16,10 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        /*
-         * TODO : update defaults to include all of the character properties. initialize them as nil. 
-        */
-        UserDefaults.standard.set(["character1":["created":false], "character2":["created":false],"character3":["created":false]], forKey: "buttonStates")
+        
+        let defaults = UserDefaults.standard
+        let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":""]
+        defaults.set(initInfo, forKey: "char1")
+        defaults.set(initInfo, forKey: "char2")
+        defaults.set(initInfo, forKey: "char3")
         
         return true
     }
