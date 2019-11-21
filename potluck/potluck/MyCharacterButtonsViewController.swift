@@ -12,12 +12,15 @@ class MyCharacterButtonsViewController: UIViewController {
     @IBOutlet weak var character1: UIButton!
     @IBOutlet weak var character2: UIButton!
     @IBOutlet weak var character3: UIButton!
-    var buttonStates: [String:[ String:Bool]] = [:]
+//    var buttonStates: [String:[ String:Bool]] = [:]
+    var char1Info: [String:Any] = [:]
+    var char2Info: [String:Any] = [:]
+    var char3Info: [String:Any] = [:]
     let defaults = UserDefaults.standard
    
     @IBAction func character1Pressed(_ sender: Any) {
-        
-            if (buttonStates["character1"]?["created"] == false) {
+//            if (buttonStates["character1"]?["created"] == false) {
+        if char1Info["created"]as?Bool == false {
                 //segue to create char screen & pass buttonStates value
                 performSegue(withIdentifier: "createCharacter1", sender: nil)
                 
@@ -28,7 +31,7 @@ class MyCharacterButtonsViewController: UIViewController {
     }
     
     @IBAction func character2Pressed(_ sender: Any) {
-        if (buttonStates["character2"]?["created"] == false) {
+        if char2Info["created"]as?Bool == false {
             //segue to create char screen & pass buttonStates value
             performSegue(withIdentifier: "createCharacter2", sender: nil)
             
@@ -38,7 +41,7 @@ class MyCharacterButtonsViewController: UIViewController {
     }
     
     @IBAction func character3Pressed(_ sender: Any) {
-        if (buttonStates["character3"]?["created"] == false) {
+        if char3Info["created"]as?Bool == false {
             //segue to create char screen & pass buttonStates value
             performSegue(withIdentifier: "createCharacter3", sender: nil)
             
@@ -56,13 +59,25 @@ class MyCharacterButtonsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        buttonStates =  defaults.object(forKey: "buttonStates") as! [String : [String : Bool]]
+        char1Info =  defaults.object(forKey: "char1") as! [String : Any]
+        char2Info =  defaults.object(forKey: "char2") as! [String : Any]
+        char3Info =  defaults.object(forKey: "char3") as! [String : Any]
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
        
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextVC = segue.destination as? CreateCharacterViewController {
+            if segue.identifier == "createCharacter1" {
+                nextVC.charToCreate = "char1"
+            } else if segue.identifier == "createCharacter2" {
+                nextVC.charToCreate = "char2"
+            } else {
+                nextVC.charToCreate = "char3"
+            }
+        }
+    }
 }

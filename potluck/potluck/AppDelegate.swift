@@ -20,13 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          * TODO : update defaults to include all of the character properties. initialize them as nil. 
         */
         let defaults = UserDefaults.standard
-        let initInfo : [String:String] = ["firstName":"", "lastName":"", "avatar":"", "gender":"", "age":"", "location":"", "bio":""]
+        let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":""]
         defaults.set(initInfo, forKey: "char1")
-        defaults.set(["created":false], forKey: "char1")
         defaults.set(initInfo, forKey: "char2")
-        defaults.set(["created":false], forKey: "char2")
         defaults.set(initInfo, forKey: "char3")
-        defaults.set(["created":false], forKey: "char3")
         
         return true
     }
