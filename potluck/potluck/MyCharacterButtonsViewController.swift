@@ -19,6 +19,7 @@ class MyCharacterButtonsViewController: UIViewController {
         
             if (buttonStates["character1"]?["created"] == false) {
                 //segue to create char screen & pass buttonStates value
+                performSegue(withIdentifier: "createCharacter1", sender: nil)
                 
             } else {
                 //segue to char page
@@ -29,6 +30,7 @@ class MyCharacterButtonsViewController: UIViewController {
     @IBAction func character2Pressed(_ sender: Any) {
         if (buttonStates["character2"]?["created"] == false) {
             //segue to create char screen & pass buttonStates value
+            performSegue(withIdentifier: "createCharacter2", sender: nil)
             
         } else {
             //segue to char page
@@ -38,6 +40,7 @@ class MyCharacterButtonsViewController: UIViewController {
     @IBAction func character3Pressed(_ sender: Any) {
         if (buttonStates["character3"]?["created"] == false) {
             //segue to create char screen & pass buttonStates value
+            performSegue(withIdentifier: "createCharacter3", sender: nil)
             
         } else {
             //segue to char page

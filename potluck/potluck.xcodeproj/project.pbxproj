@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47A878352385AD2C00181F2A /* MyCharacterButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A878342385AD2C00181F2A /* MyCharacterButtonsViewController.swift */; };
+		47A878372386454500181F2A /* CreateCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A878362386454500181F2A /* CreateCharacterViewController.swift */; };
 		47BB79FA237322620091E22F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB79F9237322620091E22F /* AppDelegate.swift */; };
 		47BB79FC237322620091E22F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB79FB237322620091E22F /* ProfileViewController.swift */; };
 		47BB79FE237322620091E22F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB79FD237322620091E22F /* SecondViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		47A878342385AD2C00181F2A /* MyCharacterButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterButtonsViewController.swift; sourceTree = "<group>"; };
+		47A878362386454500181F2A /* CreateCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCharacterViewController.swift; sourceTree = "<group>"; };
 		47BB79F6237322620091E22F /* potluck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = potluck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BB79F9237322620091E22F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47BB79FB237322620091E22F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				47BB7A02237322650091E22F /* Assets.xcassets */,
 				47BB7A04237322650091E22F /* LaunchScreen.storyboard */,
 				47BB7A07237322650091E22F /* Info.plist */,
+				47A878362386454500181F2A /* CreateCharacterViewController.swift */,
 			);
 			path = potluck;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47A878352385AD2C00181F2A /* MyCharacterButtonsViewController.swift in Sources */,
+				47A878372386454500181F2A /* CreateCharacterViewController.swift in Sources */,
 				47BB79FE237322620091E22F /* SecondViewController.swift in Sources */,
 				47BB79FA237322620091E22F /* AppDelegate.swift in Sources */,
 				47BB79FC237322620091E22F /* ProfileViewController.swift in Sources */,
