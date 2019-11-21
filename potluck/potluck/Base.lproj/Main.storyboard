@@ -45,7 +45,7 @@
                                 <state key="normal" title="Sign in"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-06 at 8.08.10 AM" translatesAutoresizingMaskIntoConstraints="NO" id="6Hv-4w-Dwo">
-                                <rect key="frame" x="8" y="15" width="94.000000000000057" height="87"/>
+                                <rect key="frame" x="8" y="15" width="94" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="E0x-Eb-Ghh"/>
                                     <constraint firstAttribute="height" constant="87" id="NdY-D2-AYs"/>
@@ -365,7 +365,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-06 at 8.08.10 AM" translatesAutoresizingMaskIntoConstraints="NO" id="IE2-Rz-eyC">
-                                <rect key="frame" x="16" y="24" width="94.000000000000057" height="87"/>
+                                <rect key="frame" x="16" y="24" width="94" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="DLd-eb-iAn"/>
                                     <constraint firstAttribute="width" constant="94" id="t0c-g8-nvf"/>
@@ -510,7 +510,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-06 at 8.08.10 AM" translatesAutoresizingMaskIntoConstraints="NO" id="ssg-eT-6df">
-                                <rect key="frame" x="8" y="15" width="94.000000000000057" height="87"/>
+                                <rect key="frame" x="8" y="15" width="94" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="0ad-LC-HU4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="Euv-9x-UwQ"/>

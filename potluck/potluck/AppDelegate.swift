@@ -19,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*
          * TODO : update defaults to include all of the character properties. initialize them as nil. 
         */
-        UserDefaults.standard.set(["character1":["created":false, "avatar":nil, "firstName":nil, "lastName":nil, "gender":nil, "age":nil, "location":nil, "bio":nil], "character2":["created":false, "avatar":nil, "firstName":nil, "lastName":nil, "gender":nil, "age":nil, "location":nil, "bio":nil],"character3":["created":false, "avatar":nil, "firstName":nil, "lastName":nil, "gender":nil, "age":nil, "location":nil, "bio":nil]], forKey: "buttonStates")
+        let defaults = UserDefaults.standard
+        let initInfo : [String:String] = ["firstName":"", "lastName":"", "avatar":"", "gender":"", "age":"", "location":"", "bio":""]
+        defaults.set(initInfo, forKey: "char1")
+        defaults.set(["created":false], forKey: "char1")
+        defaults.set(initInfo, forKey: "char2")
+        defaults.set(["created":false], forKey: "char2")
+        defaults.set(initInfo, forKey: "char3")
+        defaults.set(["created":false], forKey: "char3")
         
         return true
     }
