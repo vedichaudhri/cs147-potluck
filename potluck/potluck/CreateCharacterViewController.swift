@@ -20,6 +20,20 @@ class CreateCharacterViewController: UIViewController {
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var avatarButton: UIButton!
+    
+    @IBAction func addAvatarButtonPressed(_ sender: Any) {
+        
+        if (charToCreate == "char1") {
+            avatarButton.setImage( UIImage.init(named: "SarahLamAvatar"), for: .normal)
+        }
+        if (charToCreate == "char2") {
+            avatarButton.setImage( UIImage.init(named: "ZariaJonesAvatar"), for: .normal)
+        }
+        if (charToCreate == "char3") {
+            avatarButton.setImage( UIImage.init(named: "SergioGarciaAvatar"), for: .normal)
+        }
+    }
     /*
      * TODO :  connect IBaction to "create" button and update the user defaults
      * when button is pressed. get values fromm the iboutlet above ^
