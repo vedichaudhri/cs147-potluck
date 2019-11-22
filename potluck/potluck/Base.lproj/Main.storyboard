@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZH-Se-EPC">
-                                <rect key="frame" x="0.0" y="368" width="375" height="299"/>
+                                <rect key="frame" x="0.0" y="368" width="375" height="250"/>
                                 <connections>
                                     <segue destination="fe4-kE-Ikz" kind="embed" id="DfO-0N-b6x"/>
                                 </connections>
@@ -661,7 +661,7 @@
             <objects>
                 <viewController id="fe4-kE-Ikz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4sC-YS-SHR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a4M-Ox-fOp"/>
@@ -688,7 +688,7 @@
                                 <state key="normal" image="CreateCharacterButton"/>
                                 <connections>
                                     <action selector="character1Pressed:" destination="fe7-o5-cLY" eventType="touchUpInside" id="ULd-Xs-uAR"/>
-                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter1" id="pUg-qf-7ti"/>
+                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter1" modalPresentationStyle="overCurrentContext" id="pUg-qf-7ti"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCn-CV-x1e">
@@ -700,7 +700,7 @@
                                 <state key="normal" image="CreateCharacterButton"/>
                                 <connections>
                                     <action selector="character3Pressed:" destination="fe7-o5-cLY" eventType="touchUpInside" id="kNY-x5-xqN"/>
-                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter3" id="TN6-dw-X2d"/>
+                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter3" modalPresentationStyle="overCurrentContext" id="TN6-dw-X2d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-DL-ge5">
@@ -712,7 +712,7 @@
                                 <state key="normal" image="CreateCharacterButton"/>
                                 <connections>
                                     <action selector="character2Pressed:" destination="fe7-o5-cLY" eventType="touchUpInside" id="4zX-d9-zQL"/>
-                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter2" id="5G7-nl-e8P"/>
+                                    <segue destination="itt-Bz-opI" kind="presentation" identifier="createCharacter2" modalPresentationStyle="overCurrentContext" id="5G7-nl-e8P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -740,17 +740,24 @@
             </objects>
             <point key="canvasLocation" x="2717.5999999999999" y="-772.71364317841085"/>
         </scene>
-        <!--View Controller-->
+        <!--Char Profile View Controller-->
         <scene sceneID="PAu-1y-Are">
             <objects>
-                <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" customClass="CharProfileViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuo-We-pmf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-Vy-XqS">
-                                <rect key="frame" x="16" y="16" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-Vy-XqS">
+                                <rect key="frame" x="16" y="16" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="7dF-n1-jW6"/>
+                                    <constraint firstAttribute="width" constant="38" id="kej-TK-3jw"/>
+                                </constraints>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="fbz-uF-a4C" eventType="touchUpInside" id="3uj-vr-5km"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-gN-sDB">
                                 <rect key="frame" x="122" y="65" width="130" height="117"/>
@@ -801,7 +808,7 @@
                                 </constraints>
                                 <state key="normal" image="BackButton"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="presentation" identifier="" id="pfQ-xn-Mh9"/>
+                                    <action selector="backButtonPressed:" destination="itt-Bz-opI" eventType="touchUpInside" id="0h5-CP-Q9d"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopRight2Circles" translatesAutoresizingMaskIntoConstraints="NO" id="yOK-zO-HJQ">
@@ -897,7 +904,6 @@
                                 <state key="normal" image="CreateButton"/>
                                 <connections>
                                     <action selector="createChar:" destination="itt-Bz-opI" eventType="touchUpInside" id="xqa-oJ-rxu"/>
-                                    <segue destination="9pv-A4-QxB" kind="presentation" identifier="profilePage" id="CXT-bW-WD6"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text=" Text here. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPt-6Z-cJF">
@@ -1047,8 +1053,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pUg-qf-7ti"/>
+        <segue reference="5G7-nl-e8P"/>
         <segue reference="xC0-2E-P6g"/>
-        <segue reference="pfQ-xn-Mh9"/>
     </inferredMetricsTieBreakers>
 </document>

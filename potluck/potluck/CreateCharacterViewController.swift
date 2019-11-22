@@ -29,9 +29,12 @@ class CreateCharacterViewController: UIViewController {
         let defaults = UserDefaults.standard
         let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text, "lastName":lastName.text, "gender":gender.text, "age":age.text, "location":location.text, "bio":"bio"]
         defaults.set(updatedInfo, forKey: charToCreate)
-        performSegue(withIdentifier: "profilePage", sender: nil)
+        self.dismiss(animated: true, completion:nil)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion:nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
