@@ -1065,8 +1065,8 @@
         <!--Char Profile View Controller-->
         <scene sceneID="PAu-1y-Are">
             <objects>
-                <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yuo-We-pmf">
+                <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" customClass="CharProfileViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yuo-We-pmf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
