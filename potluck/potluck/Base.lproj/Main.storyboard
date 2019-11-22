@@ -154,11 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZH-Se-EPC">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="348" width="375" height="250"/>
-=======
                                 <rect key="frame" x="0.0" y="368" width="375" height="250"/>
->>>>>>> 29f66bb8bb68eb31e505adfa815d87634b986198
                                 <connections>
                                     <segue destination="fe4-kE-Ikz" kind="embed" id="DfO-0N-b6x"/>
                                 </connections>
@@ -1069,13 +1065,8 @@
         <!--Char Profile View Controller-->
         <scene sceneID="PAu-1y-Are">
             <objects>
-<<<<<<< HEAD
                 <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yuo-We-pmf">
-=======
-                <viewController storyboardIdentifier="characterProfile" id="fbz-uF-a4C" customClass="CharProfileViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yuo-We-pmf">
->>>>>>> 29f66bb8bb68eb31e505adfa815d87634b986198
                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1390,9 +1381,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="5G7-nl-e8P"/>
         <segue reference="xC0-2E-P6g"/>
-<<<<<<< HEAD
         <segue reference="u7Y-xg-7CH"/>
-=======
->>>>>>> 29f66bb8bb68eb31e505adfa815d87634b986198
     </inferredMetricsTieBreakers>
 </document>
