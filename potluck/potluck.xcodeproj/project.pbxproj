@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474C81332387A3D600B83E6A /* RectangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C81322387A3D600B83E6A /* RectangleViewController.swift */; };
 		47A878352385AD2C00181F2A /* MyCharacterButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A878342385AD2C00181F2A /* MyCharacterButtonsViewController.swift */; };
 		47A878372386454500181F2A /* CreateCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A878362386454500181F2A /* CreateCharacterViewController.swift */; };
 		47A8783923875FE800181F2A /* CharProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8783823875FE800181F2A /* CharProfileViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474C81322387A3D600B83E6A /* RectangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewController.swift; sourceTree = "<group>"; };
 		47A878342385AD2C00181F2A /* MyCharacterButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterButtonsViewController.swift; sourceTree = "<group>"; };
 		47A878362386454500181F2A /* CreateCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCharacterViewController.swift; sourceTree = "<group>"; };
 		47A8783823875FE800181F2A /* CharProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharProfileViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				47BB7A07237322650091E22F /* Info.plist */,
 				47A878362386454500181F2A /* CreateCharacterViewController.swift */,
 				47A8783823875FE800181F2A /* CharProfileViewController.swift */,
+				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
 			);
 			path = potluck;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				47A878372386454500181F2A /* CreateCharacterViewController.swift in Sources */,
 				47BB79FE237322620091E22F /* SecondViewController.swift in Sources */,
 				47BB79FA237322620091E22F /* AppDelegate.swift in Sources */,
+				474C81332387A3D600B83E6A /* RectangleViewController.swift in Sources */,
 				47BB79FC237322620091E22F /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

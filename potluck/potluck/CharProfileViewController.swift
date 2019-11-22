@@ -18,6 +18,10 @@ class CharProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("@@@@@@@")
+        print(charID)
+        print("@@@@@@@")
+
 //        let image : UIImage
         if charID == "char1" {
             self.charAvatar.image = #imageLiteral(resourceName: "onboarding3")
@@ -32,7 +36,9 @@ class CharProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    /*public func getCharID() -> String {
+        return charID
+    }*/
     /*
     // MARK: - Navigation
 
