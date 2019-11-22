@@ -19,7 +19,7 @@ class CreateCharacterViewController: UIViewController {
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var location: UITextField!
-    @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var bio: UITextView!
     @IBOutlet weak var avatarButton: UIButton!
     
     @IBAction func addAvatarButtonPressed(_ sender: Any) {
@@ -41,7 +41,7 @@ class CreateCharacterViewController: UIViewController {
     
     @IBAction func createChar(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text, "lastName":lastName.text, "gender":gender.text, "age":age.text, "location":location.text, "bio":"bio"]
+        let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text, "lastName":lastName.text, "gender":gender.text, "age":age.text, "location":location.text, "bio":bio.text]
         defaults.set(updatedInfo, forKey: charToCreate)
         self.dismiss(animated: true, completion:nil)
     }
