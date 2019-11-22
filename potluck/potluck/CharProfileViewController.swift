@@ -11,13 +11,24 @@ import UIKit
 class CharProfileViewController: UIViewController {
 
     var charID = ""
+    @IBOutlet var charAvatar: UIImageView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let image : UIImage
+        if charID == "char1" {
+            self.charAvatar.image = #imageLiteral(resourceName: "onboarding3")
+        }
+        if charID == "char2" {
+            self.charAvatar.image = #imageLiteral(resourceName: "ZariaJonesAvatar")
+        }
+        if charID == "char3" {
+            self.charAvatar.image = #imageLiteral(resourceName: "SergioGarciaAvatar")
+        }
+    
         // Do any additional setup after loading the view.
     }
     
