@@ -17,11 +17,16 @@ class CharProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("@@@@@@@")
+        print(charID)
+        print("@@@@@@@")
 
         // Do any additional setup after loading the view.
     }
     
-
+    /*public func getCharID() -> String {
+        return charID
+    }*/
     /*
     // MARK: - Navigation
 
