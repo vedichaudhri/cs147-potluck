@@ -29,7 +29,8 @@ class RectangleViewController: UIViewController {
         nameLabel.text = charInfo["firstName"] as! String + " " + (charInfo["lastName"] as! String)
         aboutLabel.text = "About " + (charInfo["firstName"] as! String)
         //TODO : fix bio description!!
-        aboutDescription.text = "Sarah is currently 26 years old and grew up in Trinidad. She is passionate about running, and is hoping to be a professional athlete.\n\nNow that she’s out pursuing her dream, she wants to be inspired by similar athletes that have achieved greatness. "
+        aboutDescription.text = charInfo["bio"] as? String
+            //"Sarah is currently 26 years old and grew up in Trinidad. She is passionate about running, and is hoping to be a professional athlete.\n\nNow that she’s out pursuing her dream, she wants to be inspired by similar athletes that have achieved greatness. "
         tellAStroyDescription.text = "Add to " + (charInfo["firstName"] as! String) + "'s timeline by telling a story that builds the character."
     }
     
