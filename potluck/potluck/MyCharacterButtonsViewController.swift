@@ -50,7 +50,7 @@ class MyCharacterButtonsViewController: UIViewController {
             //segue to char page
             //performSegue(withIdentifier: "char2Profile", sender: nil)
             let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
-            newVC.charID = "char3"
+            newVC.charID = "char2"
             self.show(newVC, sender: self)
         }
     }
