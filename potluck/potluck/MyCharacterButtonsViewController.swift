@@ -33,6 +33,7 @@ class MyCharacterButtonsViewController: UIViewController {
                 //performSegue(withIdentifier: "char1Profile", sender: nil)
             let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
             newVC.charID = "char1"
+            defaults.set("char1", forKey: "charToView")
             self.show(newVC, sender: self)
         }
         
@@ -51,6 +52,7 @@ class MyCharacterButtonsViewController: UIViewController {
             //performSegue(withIdentifier: "char2Profile", sender: nil)
             let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
             newVC.charID = "char2"
+            defaults.set("char2", forKey: "charToView")
             self.show(newVC, sender: self)
         }
     }
@@ -69,6 +71,7 @@ class MyCharacterButtonsViewController: UIViewController {
             //"characterProfile"
             let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
             newVC.charID = "char3"
+            defaults.set("char3", forKey: "charToView")
             self.show(newVC, sender: self)
         }
     }

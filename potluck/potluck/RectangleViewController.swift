@@ -9,22 +9,29 @@
 import UIKit
 
 class RectangleViewController: UIViewController {
-    var charName = "char1"
+    var charName: String = "char1"
     let defaults = UserDefaults.standard
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var aboutDescription: UITextView!
     @IBOutlet weak var tellAStroyDescription: UITextView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var timelineTableView: UITableView!
     
     
     @IBAction func addButtonPressed(_ sender: Any) {
+        
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "addStoryVC") as! AddStoryViewController
+        
+        self.show(newVC, sender: self)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //let parentVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
         //charName = parentVC.charID
+        charName = defaults.string(forKey: "charToView")!
         let charInfo : [String:Any] = defaults.object(forKey: charName) as! [String : Any]
         nameLabel.text = charInfo["firstName"] as! String + " " + (charInfo["lastName"] as! String)
         aboutLabel.text = "About " + (charInfo["firstName"] as! String)
