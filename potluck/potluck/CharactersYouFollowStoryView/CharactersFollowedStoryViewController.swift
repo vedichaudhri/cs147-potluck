@@ -1,5 +1,5 @@
 //
-//  CVTVViewController.swift
+//  CharactersFollowedStoryViewController.swift
 //  potluck
 //
 //  Created by Vedi Chaudhri on 12/4/19.
@@ -8,26 +8,21 @@
 
 import UIKit
 
-class CVTVViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
+class CharactersFollowedStoryCollectionViewCell: UICollectionViewCell {
     
-    // MARK:- table view delegate
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
+}
+
+class CharactersFollowedStoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CVTVTableViewCell") as! CVTVTableViewCell
-        
-        return cell
-    }
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    // MARK:- collection view delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVTVCollectionViewCell", for: indexPath) as! CVTVCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharactersFollowedStoryCollectionViewCell", for: indexPath) as! CharactersFollowedStoryCollectionViewCell
         return cell
     }
     
@@ -37,10 +32,6 @@ class CVTVViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    
     
 
     /*
