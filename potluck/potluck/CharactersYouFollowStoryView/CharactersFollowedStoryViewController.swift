@@ -9,13 +9,17 @@
 import UIKit
 
 class CharactersFollowedStoryCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var charImage: UIImageView!
+    @IBOutlet weak var charName: UILabel!
 }
 
 class CharactersFollowedStoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let charNames: [String] = ["Susie", "Todd", "Nelson", "Larry", "Mary", "George"]
+    let charImages: [String] = ["SusisYongAvatar", "ToddCheckAvatar", "NelsonSandersAvatar", "LarryWilsonAvatar", "MaryYuAvatar", "GeorgeTubbsAvatar"]
+      
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
@@ -23,6 +27,9 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharactersFollowedStoryCollectionViewCell", for: indexPath) as! CharactersFollowedStoryCollectionViewCell
+        cell.charName.text = charNames[indexPath.row]
+        cell.charImage.image = UIImage.init(named:charImages[indexPath.row])
+        
         return cell
     }
     
