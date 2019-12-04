@@ -27,7 +27,7 @@ class CVTVViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVTVTableViewCell", for: indexPath) as! CVTVCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVTVCollectionViewCell", for: indexPath) as! CVTVCollectionViewCell
         return cell
     }
     

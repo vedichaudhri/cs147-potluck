@@ -24,7 +24,7 @@ class CVTVTableViewCell: UITableViewCell {
 
 }
 
-extension CVTVTableViewCell {
+/*extension CVTVTableViewCell {
     
     func setCollectionViewDataSourceDelegate <D: UICollectionViewDelegate & UICollectionViewDataSource> (_ dataSourceDelegate: D, forRow row:Int){
         CVTVCollectionView.delegate = dataSourceDelegate
@@ -33,4 +33,4 @@ extension CVTVTableViewCell {
         CVTVCollectionView.reloadData()
     }
     
-}
+}*/

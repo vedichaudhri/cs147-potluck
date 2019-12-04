@@ -127,7 +127,7 @@
 				47A8783823875FE800181F2A /* CharProfileViewController.swift */,
 				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
 				474AAECE238F685500E6B509 /* AddStoryViewController.swift */,
-				47E279832398099800C9740D /* CollectionViewInsideTableView */,
+				47E279832398099800C9740D /* ExploreCollectionViewInsideTableView */,
 			);
 			path = potluck;
 			sourceTree = "<group>";
@@ -150,14 +150,14 @@
 			path = potluckUITests;
 			sourceTree = "<group>";
 		};
-		47E279832398099800C9740D /* CollectionViewInsideTableView */ = {
+		47E279832398099800C9740D /* ExploreCollectionViewInsideTableView */ = {
 			isa = PBXGroup;
 			children = (
 				47E27984239809DF00C9740D /* CVTVViewController.swift */,
 				47E2798623980A2400C9740D /* CVTVTableViewCell.swift */,
 				47E2798823980A3E00C9740D /* CVTVCollectionViewCell.swift */,
 			);
-			path = CollectionViewInsideTableView;
+			path = ExploreCollectionViewInsideTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
