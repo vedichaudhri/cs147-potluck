@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wu6-xs-Hd5">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -229,11 +229,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPS-uV-dB9">
-                                <rect key="frame" x="236" y="47" width="30" height="30"/>
+                                <rect key="frame" x="236" y="17" width="60" height="60"/>
                                 <state key="normal" image="first"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-Pp-eWy">
-                                <rect key="frame" x="312" y="47" width="30" height="30"/>
+                                <rect key="frame" x="342" y="17" width="60" height="60"/>
                                 <state key="normal" image="first"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TopRightCircle" translatesAutoresizingMaskIntoConstraints="NO" id="wTV-Nh-GGQ">
@@ -748,25 +748,20 @@
                                 <rect key="frame" x="0.0" y="381" width="375" height="160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2) Share your immigrant stories" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-PQ-mWV">
-                                        <rect key="frame" x="27" y="86" width="342" height="21"/>
+                                        <rect key="frame" x="27" y="86" width="251" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.19496288179999999" green="0.02611862651" blue="0.29108502539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3) Find and talk with character role models" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-22-cNd">
-                                        <rect key="frame" x="27" y="114" width="342" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Create characters (up to 3)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PP-O9-G3y">
+                                        <rect key="frame" x="27" y="59" width="251" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.19496288179999999" green="0.02611862651" blue="0.29108502539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1) Create characters" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PP-O9-G3y">
-                                        <rect key="frame" x="27" y="59" width="342" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.19496288179999999" green="0.02611862651" blue="0.29108502539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4) Get advice" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-3n-wuG">
-                                        <rect key="frame" x="27" y="139" width="342" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3) Find and talk with character role models by contributing to their stories" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-3n-wuG">
+                                        <rect key="frame" x="27" y="111" width="314" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.19496288179999999" green="0.02611862651" blue="0.29108502539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -786,18 +781,19 @@
                                     <constraint firstItem="Cee-Vs-dpH" firstAttribute="top" secondItem="g4S-G7-gNB" secondAttribute="top" constant="8" id="2Qa-KG-RdO"/>
                                     <constraint firstItem="Cee-Vs-dpH" firstAttribute="centerX" secondItem="g4S-G7-gNB" secondAttribute="centerX" id="3yD-iu-iFT"/>
                                     <constraint firstItem="5PP-O9-G3y" firstAttribute="leading" secondItem="g4S-G7-gNB" secondAttribute="leading" constant="27" id="4vT-lh-4Np"/>
-                                    <constraint firstItem="UJK-3n-wuG" firstAttribute="top" secondItem="Gac-22-cNd" secondAttribute="bottom" constant="4" id="Djx-9b-qtI"/>
-                                    <constraint firstItem="Gac-22-cNd" firstAttribute="leading" secondItem="UJK-3n-wuG" secondAttribute="leading" id="OvZ-8V-v5e"/>
-                                    <constraint firstItem="Gac-22-cNd" firstAttribute="trailing" secondItem="UJK-3n-wuG" secondAttribute="trailing" id="U4y-BB-vrZ"/>
                                     <constraint firstItem="5PP-O9-G3y" firstAttribute="top" secondItem="Cee-Vs-dpH" secondAttribute="bottom" constant="30" id="aKi-YM-bUP"/>
                                     <constraint firstItem="5PP-O9-G3y" firstAttribute="trailing" secondItem="ydM-PQ-mWV" secondAttribute="trailing" id="mwa-PV-e2l"/>
                                     <constraint firstItem="ydM-PQ-mWV" firstAttribute="top" secondItem="5PP-O9-G3y" secondAttribute="bottom" constant="6" id="odi-hA-pGY"/>
-                                    <constraint firstItem="ydM-PQ-mWV" firstAttribute="trailing" secondItem="Gac-22-cNd" secondAttribute="trailing" id="p4N-0u-9Kf"/>
                                     <constraint firstItem="5PP-O9-G3y" firstAttribute="leading" secondItem="ydM-PQ-mWV" secondAttribute="leading" id="pSl-fu-QIy"/>
-                                    <constraint firstItem="Gac-22-cNd" firstAttribute="top" secondItem="ydM-PQ-mWV" secondAttribute="bottom" constant="7" id="tZq-Bm-aFM"/>
-                                    <constraint firstItem="ydM-PQ-mWV" firstAttribute="leading" secondItem="Gac-22-cNd" secondAttribute="leading" id="wMs-OJ-LjV"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4) Get advice" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-Dg-c70">
+                                <rect key="frame" x="28" y="544" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.19496288179999999" green="0.02611862651" blue="0.29108502539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
