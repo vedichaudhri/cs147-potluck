@@ -20,6 +20,9 @@
 		47BB7A06237322650091E22F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BB7A04237322650091E22F /* LaunchScreen.storyboard */; };
 		47BB7A11237322650091E22F /* potluckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB7A10237322650091E22F /* potluckTests.swift */; };
 		47BB7A1C237322650091E22F /* potluckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB7A1B237322650091E22F /* potluckUITests.swift */; };
+		47E27985239809DF00C9740D /* CVTVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E27984239809DF00C9740D /* CVTVViewController.swift */; };
+		47E2798723980A2400C9740D /* CVTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2798623980A2400C9740D /* CVTVTableViewCell.swift */; };
+		47E2798923980A3E00C9740D /* CVTVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2798823980A3E00C9740D /* CVTVCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		47BB7A17237322650091E22F /* potluckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = potluckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BB7A1B237322650091E22F /* potluckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = potluckUITests.swift; sourceTree = "<group>"; };
 		47BB7A1D237322650091E22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E27984239809DF00C9740D /* CVTVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTVViewController.swift; sourceTree = "<group>"; };
+		47E2798623980A2400C9740D /* CVTVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTVTableViewCell.swift; sourceTree = "<group>"; };
+		47E2798823980A3E00C9740D /* CVTVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTVCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 				47A8783823875FE800181F2A /* CharProfileViewController.swift */,
 				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
 				474AAECE238F685500E6B509 /* AddStoryViewController.swift */,
+				47E279832398099800C9740D /* CollectionViewInsideTableView */,
 			);
 			path = potluck;
 			sourceTree = "<group>";
@@ -141,6 +148,16 @@
 				47BB7A1D237322650091E22F /* Info.plist */,
 			);
 			path = potluckUITests;
+			sourceTree = "<group>";
+		};
+		47E279832398099800C9740D /* CollectionViewInsideTableView */ = {
+			isa = PBXGroup;
+			children = (
+				47E27984239809DF00C9740D /* CVTVViewController.swift */,
+				47E2798623980A2400C9740D /* CVTVTableViewCell.swift */,
+				47E2798823980A3E00C9740D /* CVTVCollectionViewCell.swift */,
+			);
+			path = CollectionViewInsideTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E27985239809DF00C9740D /* CVTVViewController.swift in Sources */,
 				474AAECF238F685500E6B509 /* AddStoryViewController.swift in Sources */,
 				47A8783923875FE800181F2A /* CharProfileViewController.swift in Sources */,
 				47A878352385AD2C00181F2A /* MyCharacterButtonsViewController.swift in Sources */,
@@ -281,7 +299,9 @@
 				47BB79FE237322620091E22F /* SecondViewController.swift in Sources */,
 				47BB79FA237322620091E22F /* AppDelegate.swift in Sources */,
 				474C81332387A3D600B83E6A /* RectangleViewController.swift in Sources */,
+				47E2798723980A2400C9740D /* CVTVTableViewCell.swift in Sources */,
 				47BB79FC237322620091E22F /* ProfileViewController.swift in Sources */,
+				47E2798923980A3E00C9740D /* CVTVCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
