@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jKW-Ee-rIu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="-2769" y="-16"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="ProfileViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="profile_grey_5" selectedImage="profile_selected_5" springLoaded="YES" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" title="Profile" image="prof" selectedImage="prof" springLoaded="YES" id="acW-dT-cKf">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="2lo-bQ-KP1"/>
@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="1972" y="-429.53523238380814"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Explore-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
@@ -359,7 +359,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home_grey_5" selectedImage="home_selected_5" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="newExplore" selectedImage="newExplore" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -442,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="2824.8000000000002" y="279.31034482758622"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="ipu-tE-J9D">
             <objects>
                 <viewController id="u9k-zy-tya" sceneMemberID="viewController">
@@ -519,7 +519,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dJy-8r-SqD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="following_grey_5" selectedImage="following_selected_5" id="30F-2s-Cus"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="newHome" selectedImage="newHome" id="30F-2s-Cus"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6C9-42-gUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2027,15 +2027,12 @@
         <image name="TopLeft1Circle" width="105" height="59"/>
         <image name="TopRight2Circles" width="103" height="171"/>
         <image name="TopRightCircle" width="107" height="70"/>
-        <image name="following_grey_5" width="66" height="48"/>
-        <image name="following_selected_5" width="52" height="48"/>
-        <image name="home_grey_5" width="66" height="48"/>
-        <image name="home_selected_5" width="66" height="48"/>
+        <image name="newExplore" width="43" height="31"/>
+        <image name="newHome" width="24" height="22"/>
         <image name="onboarding2" width="150.66667175292969" height="143.66667175292969"/>
         <image name="onboarding3" width="178" height="178"/>
         <image name="onboarding_1" width="239" height="191"/>
-        <image name="profile_grey_5" width="66" height="48"/>
-        <image name="profile_selected_5" width="68" height="48"/>
+        <image name="prof" width="31" height="31"/>
         <image name="speech_bubble" width="54" height="47.666667938232422"/>
     </resources>
     <inferredMetricsTieBreakers>
