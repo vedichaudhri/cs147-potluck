@@ -9,5 +9,6 @@
 import UIKit
 
 class ProfileCVTVCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var label: UILabel!
 }

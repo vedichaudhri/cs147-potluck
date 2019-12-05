@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileCVTVTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var ProfileCVTVCollectionView: UICollectionView!
     
     override func awakeFromNib() {
