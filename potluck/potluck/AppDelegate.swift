@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(initInfo, forKey: "char2")
         defaults.set(initInfo, forKey: "char3")
         defaults.set("char1", forKey: "charToView")
+        defaults.set("immigration", forKey: "searchView")
         
         return true
     }
