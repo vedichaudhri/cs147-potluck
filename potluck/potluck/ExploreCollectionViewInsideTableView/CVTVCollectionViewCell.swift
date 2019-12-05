@@ -9,6 +9,8 @@
 import UIKit
 
 class CVTVCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var label: UILabel!
