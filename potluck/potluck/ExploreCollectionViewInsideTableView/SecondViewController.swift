@@ -14,7 +14,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var searchView = "immigration"
     
     //TODO: prettify this!!!
-    let charInfo = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "First Day"], ["Character4StoryPic1", "Grocery"],["Character4StoryPic1", "Grocery"]], [["MaryYuAvatar", "Mary"], ["Character4StoryPic1", "Groc"], ["MaryYuAvatar", "Marss"], ["Character4StoryPic1", "Groc"]], [["NelsonSandersAvatar","Nelson"], ["apartment", "Housing crisis"], ["Character1StoryPic1", "New Foods"],["Character10StoryPic1", "Runner's Dilemna"]]]
+    let charInfo = [[["ToddCheckAvatar","Todd"], ["books", "International books"], ["burnout", "Work burnout"],["visa", "Travel visa"]], [["SusisYongAvatar", "Susie"], ["immigration", "Immigration process"], ["finance", "Personal finance"], ["grad", "PhD programs"]], [["GeorgeTubbsAvatar","George"], ["travel", "Travel tips"], ["job", "Help with job search"],["health", "Health insurance"]]]
     
     var sectionNum = 0
     
