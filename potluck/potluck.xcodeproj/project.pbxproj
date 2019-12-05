@@ -102,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		471934532399AC18001607CC /* ViewCharProfile */ = {
+			isa = PBXGroup;
+			children = (
+				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
+				474AAECE238F685500E6B509 /* AddStoryViewController.swift */,
+			);
+			path = ViewCharProfile;
+			sourceTree = "<group>";
+		};
 		47BB79ED237322610091E22F = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +143,7 @@
 				47BB7A07237322650091E22F /* Info.plist */,
 				47A878362386454500181F2A /* CreateCharacterViewController.swift */,
 				47A8783823875FE800181F2A /* CharProfileViewController.swift */,
-				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
-				474AAECE238F685500E6B509 /* AddStoryViewController.swift */,
+				471934532399AC18001607CC /* ViewCharProfile */,
 				47E279952398920E00C9740D /* SearchScreen */,
 				47E2798F2398264D00C9740D /* FollowingViews */,
 				47E2798A2398192700C9740D /* ProfileCollectionViewInsideTableView */,
