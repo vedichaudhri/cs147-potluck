@@ -41,6 +41,8 @@ class FollowingStoriesViewController: UIViewController, UITableViewDataSource, U
     let storyTexts: [String] = ["I think a common pitfall of the immigrant experience is that people work so incredibly hard to fit in, but then overlook themselves...", "I recently moved to a new city to be closer to my parents, who are elderly and speak limited English...", "Being an athlete certainly hasn't been easy. After moving to a big city, I've been having a harder time finding places to train..."]
     let storyImages: [String] = ["Character1StoryPic1", "apartment", "Character10StoryPic1"]
     
+    @IBOutlet weak var followingTableView: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -62,6 +64,7 @@ class FollowingStoriesViewController: UIViewController, UITableViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        followingTableView.separatorColor = UIColor.clear
 //        followingStoriesTableView.reloadData()
 
         // Do any additional setup after loading the view.
