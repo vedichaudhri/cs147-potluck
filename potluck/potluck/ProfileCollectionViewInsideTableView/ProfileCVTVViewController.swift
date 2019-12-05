@@ -13,6 +13,8 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
     let photos = ["LarryWilsonAvatar", "Character1QuestionPic1", ""]
     
     let labels = ["Larry", "First Day", ""]
+    let lock = NSLock()
+    
     
 //    let photos2 = ["MaryYuAvatar", "Character4StoryPic1", ""]
 //
@@ -47,6 +49,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCVTVTableViewCell") as! ProfileCVTVTableViewCell
         //cell.tag = indexPath.section
+        lock.lock()
         self.sectionNum = indexPath.section
 //        cell.ProfileCVTVCollectionView =
         
@@ -79,7 +82,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
             cell.photo.contentMode = .scaleAspectFit
             
         }
-        
+        lock.unlock()
         return cell
     }
     

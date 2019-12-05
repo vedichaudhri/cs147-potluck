@@ -17,6 +17,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let charInfo = [[["ToddCheckAvatar","Todd"], ["books", "International books"], ["burnout", "Work burnout"],["visa", "Travel visa"]], [["SusisYongAvatar", "Susie"], ["immigration", "Immigration process"], ["finance", "Personal finance"], ["grad", "PhD programs"]], [["GeorgeTubbsAvatar","George"], ["travel", "Travel tips"], ["job", "Help with job search"],["health", "Health insurance"]]]
     
     var sectionNum = 0
+    let lock = NSLock()
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         let newVC = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
@@ -36,6 +37,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //TODO: edit based on "search view"
         let cell = tableView.dequeueReusableCell(withIdentifier: "CVTVTableViewCell") as! CVTVTableViewCell
+        lock.lock()
         sectionNum = indexPath.section
         return cell
     }
@@ -57,6 +59,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.photo.contentMode = .scaleAspectFit
             
         }
+        lock.unlock()
         return cell
     }
     
