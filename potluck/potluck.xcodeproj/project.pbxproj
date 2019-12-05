@@ -27,6 +27,7 @@
 		47E2798E239822C000C9740D /* ProfileCVTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2798D239822C000C9740D /* ProfileCVTVTableViewCell.swift */; };
 		47E279912398268700C9740D /* CharactersFollowedStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E279902398268700C9740D /* CharactersFollowedStoryViewController.swift */; };
 		47E2799423982A3400C9740D /* FollowingStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2799323982A3400C9740D /* FollowingStoriesViewController.swift */; };
+		47E279972398923800C9740D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E279962398923800C9740D /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		47E2798D239822C000C9740D /* ProfileCVTVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCVTVTableViewCell.swift; sourceTree = "<group>"; };
 		47E279902398268700C9740D /* CharactersFollowedStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFollowedStoryViewController.swift; sourceTree = "<group>"; };
 		47E2799323982A3400C9740D /* FollowingStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingStoriesViewController.swift; sourceTree = "<group>"; };
+		47E279962398923800C9740D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,6 @@
 				47BB79F9237322620091E22F /* AppDelegate.swift */,
 				47BB79FB237322620091E22F /* ProfileViewController.swift */,
 				47A878342385AD2C00181F2A /* MyCharacterButtonsViewController.swift */,
-				47BB79FD237322620091E22F /* SecondViewController.swift */,
 				47BB79FF237322620091E22F /* Main.storyboard */,
 				47BB7A02237322650091E22F /* Assets.xcassets */,
 				47BB7A04237322650091E22F /* LaunchScreen.storyboard */,
@@ -135,6 +136,7 @@
 				47A8783823875FE800181F2A /* CharProfileViewController.swift */,
 				474C81322387A3D600B83E6A /* RectangleViewController.swift */,
 				474AAECE238F685500E6B509 /* AddStoryViewController.swift */,
+				47E279952398920E00C9740D /* SearchScreen */,
 				47E2798F2398264D00C9740D /* FollowingViews */,
 				47E2798A2398192700C9740D /* ProfileCollectionViewInsideTableView */,
 				47E279832398099800C9740D /* ExploreCollectionViewInsideTableView */,
@@ -163,6 +165,7 @@
 		47E279832398099800C9740D /* ExploreCollectionViewInsideTableView */ = {
 			isa = PBXGroup;
 			children = (
+				47BB79FD237322620091E22F /* SecondViewController.swift */,
 				47E2798623980A2400C9740D /* CVTVTableViewCell.swift */,
 				47E2798823980A3E00C9740D /* CVTVCollectionViewCell.swift */,
 			);
@@ -187,6 +190,14 @@
 			);
 			name = FollowingViews;
 			path = CharactersYouFollowStoryView;
+			sourceTree = "<group>";
+		};
+		47E279952398920E00C9740D /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				47E279962398923800C9740D /* SearchViewController.swift */,
+			);
+			path = SearchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				47E2798C239822A200C9740D /* ProfileCVTVCollectionViewCell.swift in Sources */,
 				47BB79FE237322620091E22F /* SecondViewController.swift in Sources */,
 				47E2799423982A3400C9740D /* FollowingStoriesViewController.swift in Sources */,
+				47E279972398923800C9740D /* SearchViewController.swift in Sources */,
 				47BB79FA237322620091E22F /* AppDelegate.swift in Sources */,
 				474C81332387A3D600B83E6A /* RectangleViewController.swift in Sources */,
 				47E2798723980A2400C9740D /* CVTVTableViewCell.swift in Sources */,
