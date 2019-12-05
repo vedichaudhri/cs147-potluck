@@ -21,6 +21,9 @@ class CharProfileViewController: UIViewController {
         print("@@@@@@@")
         print(charID)
         print("@@@@@@@")
+        
+        /*charAvatar.layer.cornerRadius = 50.0
+        charAvatar.backgroundColor = UIColor.lightGray*/
 
 //        let image : UIImage
         if charID == "char1" {
