@@ -17,11 +17,11 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let charNames: [String] = ["Susie", "Todd", "Nelson", "Larry", "Mary", "George"]
-    let charImages: [String] = ["SusisYongAvatar", "ToddCheckAvatar", "NelsonSandersAvatar", "LarryWilsonAvatar", "MaryYuAvatar", "GeorgeTubbsAvatar"]
+    let charNames: [String] = ["Susie", "Nelson", "Larry", "Mary", "George"]
+    let charImages: [String] = ["SusisYongAvatar", "NelsonSandersAvatar", "LarryWilsonAvatar", "MaryYuAvatar", "GeorgeTubbsAvatar"]
       
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     
