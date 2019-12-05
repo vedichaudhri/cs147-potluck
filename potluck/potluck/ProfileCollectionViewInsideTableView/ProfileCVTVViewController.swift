@@ -27,7 +27,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
     //let charInfo = [char1Info, char2Info]
     
     //TODO: prettify this!!!! fill with more relevant info!!
-    let charInfo = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "First Day"], ["Character4StoryPic1", "Grocery"],["Character4StoryPic1", "Grocery"]], [["MaryYuAvatar", "Mary"], ["Character4StoryPic1", "Groc"], ["MaryYuAvatar", "Marss"], ["Character4StoryPic1", "Groc"]], [["NelsonSandersAvatar","Nelson"], ["apartment", "Housing crisis"], ["Character1StoryPic1", "New Foods"],["Character10StoryPic1", "Runner's Dilemna"]]]
+    let charInfo = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "Negotiate salary"], ["art", "Art classes"],["Character4StoryPic1", "Groceries"]], [["MaryYuAvatar", "Mary"], ["kimchi", "Home cooking"], ["airport", "Visiting Korea"], ["apartment", "Housing crisis"]], [["NelsonSandersAvatar","Nelson"], ["school", "Son's school"], ["passport", "Renew passport"], ["Character1StoryPic1", "New foods"]]]
     
     var sectionNum = 0
     
