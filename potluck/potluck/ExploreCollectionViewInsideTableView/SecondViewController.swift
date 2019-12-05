@@ -22,6 +22,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let newVC = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         self.show(newVC, sender: self)
     }
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK:- table view delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,9 +64,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView = defaults.object(forKey: "searchView") as! String
+        tableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+   
+    
 }
 

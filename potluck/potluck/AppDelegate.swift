@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let defaults = UserDefaults.standard
         let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":""]
+        let charAvatarInfo : [String:String] = ["char1":"SarahLamAvatar", "char2":"ZariaJonesAvatar", "char3":"SergioGarciaAvatar"]
         defaults.set(initInfo, forKey: "char1")
         defaults.set(initInfo, forKey: "char2")
         defaults.set(initInfo, forKey: "char3")
+        defaults.set(charAvatarInfo, forKey: "charAvatarInfo")
         defaults.set("char1", forKey: "charToView")
         defaults.set("immigration", forKey: "searchView")
         
