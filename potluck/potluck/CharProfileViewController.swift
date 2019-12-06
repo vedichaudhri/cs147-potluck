@@ -28,20 +28,17 @@ class CharProfileViewController: UIViewController {
 //        let image : UIImage
         if charID == "char1" {
             self.charAvatar.image = #imageLiteral(resourceName: "onboarding3")
-        }
-        if charID == "char2" {
+        } else if charID == "char2" {
             self.charAvatar.image = #imageLiteral(resourceName: "ZariaJonesAvatar")
-        }
-        if charID == "char3" {
+        } else if charID == "char3" {
             self.charAvatar.image = #imageLiteral(resourceName: "SergioGarciaAvatar")
-        }
-        if charID == "char4" {
+        } else if charID == "char4" {
             self.charAvatar.image = UIImage(named: "NelsonSandersAvatar")
-        }
-        if charID == "char6" {
+        } else if charID == "char5" {
+            self.charAvatar.image = UIImage(named: "SusisYongAvatar")
+        } else if charID == "char6" {
             self.charAvatar.image = UIImage(named: "GeorgeTubbsAvatar")
-        }
-        if charID == "char7" {
+        } else if charID == "char7" {
             self.charAvatar.image = UIImage(named: "MaryYuAvatar")
         }
     
