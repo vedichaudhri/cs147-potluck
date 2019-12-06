@@ -36,7 +36,7 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 || indexPath.row == 1 {
+        
             let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
             if indexPath.row == 0 {
                 newVC.charID = "char5"
@@ -44,9 +44,18 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
             } else if indexPath.row == 1 {
                 newVC.charID = "char4"
                 defaults.set("char4", forKey: "charToView")
+            } else if indexPath.row == 2 {
+                newVC.charID = "char8"
+                defaults.set("char8", forKey: "charToView")
+            } else if indexPath.row == 3 {
+                newVC.charID = "char7"
+                defaults.set("char7", forKey: "charToView")
+            } else if indexPath.row == 4 {
+                newVC.charID = "char6"
+                defaults.set("char6", forKey: "charToView")
             }
             self.show(newVC, sender: self)
-        }
+        
     }
     
 
