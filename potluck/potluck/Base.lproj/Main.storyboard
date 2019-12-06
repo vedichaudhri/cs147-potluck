@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--One View Controller-->
         <scene sceneID="6c7-4Z-oNn">
             <objects>
-                <viewController id="jKW-Ee-rIu" sceneMemberID="viewController">
+                <viewController id="jKW-Ee-rIu" customClass="OneViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bhz-uF-JDN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UBP-ci-kCb"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="1Uq-Jy-bnP" id="Rw2-Ed-LcU"/>
+                        <outlet property="phone" destination="Mvb-Cg-YAM" id="VLu-W1-IT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgO-5p-FEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -578,10 +582,10 @@
             </objects>
             <point key="canvasLocation" x="1972" y="996.25187406296857"/>
         </scene>
-        <!--View Controller-->
+        <!--Two View Controller-->
         <scene sceneID="QUW-iO-0mC">
             <objects>
-                <viewController id="kVO-wb-A4w" sceneMemberID="viewController">
+                <viewController id="kVO-wb-A4w" customClass="TwoViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKU-8M-c2T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -718,15 +722,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="93H-Uh-duY"/>
                     </view>
+                    <connections>
+                        <outlet property="name" destination="gah-gU-8Li" id="jM9-Ls-oKw"/>
+                        <outlet property="password" destination="fnS-qk-hRc" id="w6q-62-Som"/>
+                        <outlet property="phone" destination="QYA-kC-TdB" id="zLJ-Ub-vzF"/>
+                        <outlet property="repeatPassword" destination="Jnt-KJ-pVt" id="1Yr-Dm-S6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uw8-ax-i12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1890.4000000000001" y="-17.541229385307346"/>
         </scene>
-        <!--View Controller-->
+        <!--Three View Controller-->
         <scene sceneID="wX8-u7-4Ki">
             <objects>
-                <viewController id="3RQ-5q-how" sceneMemberID="viewController">
+                <viewController id="3RQ-5q-how" customClass="ThreeViewController" customModule="potluck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2e-kA-qXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -826,6 +836,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L7a-F7-H7S"/>
                     </view>
+                    <connections>
+                        <outlet property="number" destination="mHD-IU-r89" id="SHQ-NF-DTK"/>
+                        <outlet property="password" destination="a4L-uz-RvL" id="Hww-GO-6J0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcq-89-PvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

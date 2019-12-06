@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddStoryViewController: UIViewController,  UITextViewDelegate {
+class AddStoryViewController: UIViewController,  UITextViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
@@ -63,11 +63,28 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
 //        self.dismiss(animated: true, completion:nil)
     }
     
+
+    
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if storyDescriptionTextView.textColor == UIColor.lightGray {
             storyDescriptionTextView.text = nil
             storyDescriptionTextView.textColor = UIColor.black
         }
+    }
+    
+    // hide key board when the user touches outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("%%%%%%%%")
+        self.view.endEditing(true)
+    }
+    
+    // user presses return key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     
@@ -89,6 +106,13 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
         titleTextField.layer.borderColor = UIColor.lightGray.cgColor
         titleTextField.layer.borderWidth = 0.5
         titleTextField.layer.cornerRadius = 4.0
+        
+        
+        titleTextField.delegate = self
+        storyDescriptionTextView.delegate = self
+        attchmentTextField.delegate = self
+        ageTextField.delegate = self
+        
 
         // Do any additional setup after loading the view.
     }

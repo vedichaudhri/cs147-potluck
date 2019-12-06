@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateCharacterViewController: UIViewController  {
+class CreateCharacterViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
     var charToCreate = "" // "char1", "char2", or "char3"
     
     /*
@@ -52,12 +52,32 @@ class CreateCharacterViewController: UIViewController  {
     }
     
     
+    // hide key board when the user touches outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("%%%%%%%%")
+        self.view.endEditing(true)
+    }
+    
+    // user presses return key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         bio.layer.borderWidth = 1.0
         bio.layer.borderColor = UIColor.lightGray.cgColor
         bio.layer.cornerRadius = 0
+        firstName.delegate = self
+        lastName.delegate = self
+        gender.delegate = self
+        age.delegate = self
+        location.delegate = self
+        bio.delegate = self
     }
     
     
