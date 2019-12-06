@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateCharacterViewController: UIViewController {
+class CreateCharacterViewController: UIViewController  {
     var charToCreate = "" // "char1", "char2", or "char3"
     
     /*
@@ -50,9 +50,14 @@ class CreateCharacterViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        bio.layer.borderWidth = 1.0
+        bio.layer.borderColor = UIColor.lightGray.cgColor
+        bio.layer.cornerRadius = 0
     }
     
     

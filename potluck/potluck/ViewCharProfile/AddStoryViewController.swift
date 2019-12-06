@@ -40,7 +40,7 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
         //let infoToStore = {charID: {"storyName":titleTextField.text}}
         queue.async {
             print("&&&&&&&&&")
-            let story: [String] = [(self.titleTextField.text ?? ""), self.storyDescriptionTextView.text, ""]
+            let story: [String] = [(self.titleTextField.text ?? ""), self.storyDescriptionTextView.text, "dog"]
             
             var charInfo = self.defaults.dictionary(forKey: self.charID)
             var updatedTimeline: [[String]] = charInfo?["timeline"] as! [[String]]
