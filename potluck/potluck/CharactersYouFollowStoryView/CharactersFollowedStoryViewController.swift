@@ -15,6 +15,8 @@ class CharactersFollowedStoryCollectionViewCell: UICollectionViewCell {
 
 class CharactersFollowedStoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let charNames: [String] = ["Susie", "Nelson", "Larry", "Mary", "George"]
@@ -31,6 +33,20 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
         cell.charImage.image = UIImage.init(named:charImages[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 || indexPath.row == 1 {
+            let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
+            if indexPath.row == 0 {
+                newVC.charID = "char5"
+                defaults.set("char5", forKey: "charToView")
+            } else if indexPath.row == 1 {
+                newVC.charID = "char4"
+                defaults.set("char4", forKey: "charToView")
+            }
+            self.show(newVC, sender: self)
+        }
     }
     
 
