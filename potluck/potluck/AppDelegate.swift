@@ -13,13 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let defaults = UserDefaults.standard
         let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":""]
-        let charAvatarInfo : [String:String] = ["char1":"SarahLamAvatar", "char2":"ZariaJonesAvatar", "char3":"SergioGarciaAvatar", "char4":"NelsonSandersAvatar", "char5":"SusisYongAvatar", "char6":"GeorgeTubbsAvatar", "char7":"MaryYuAvatar"]
+        let charAvatarInfo : [String:String] = ["char1":"SarahLamAvatar", "char2":"ZariaJonesAvatar", "char3":"SergioGarciaAvatar", "char4":"NelsonSandersAvatar", "char5":"SusisYongAvatar", "char6":"GeorgeTubbsAvatar", "char7":"MaryYuAvatar", "char8":"LarryWilsonAvatar"]
 
         let nelsonInfo: [String: Any] = ["created":true, "firstName":"Nelson", "lastName":"Sanders", "gender":"M", "age":"42", "location":"New York", "bio":"Nelson grew up in Nigeria and moved to the States for university, where he studied computer science. He has been working in tech for over twenty years and currently lives in New York with his family."]
         
@@ -29,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let maryInfo: [String: Any] = ["created":true, "firstName":"Mary", "lastName":"Yu", "gender":"F", "age":"68", "location":"Seattle", "bio":"Mary grew up in Hong Kong and moved to the States after graduating unviersity with a degree in mechanical engineering. She worked for over thirty years as an engineer and is now happily retired. She lives with her husband and cat in Seattle."]
         
+        let larryInfo: [String: Any] = ["created":true, "firstName":"Larry", "lastName":"Wilson", "gender":"M", "age":"72", "location":"Redmond", "bio":"Larry recently retired from the construction industry, where he worked for over 40 years. He currently lives in Redmond but often flies to Ireland to visit his siblings. He enjoys long backpacking trips."]
+        
         defaults.set(initInfo, forKey: "char1")
         defaults.set(initInfo, forKey: "char2")
         defaults.set(initInfo, forKey: "char3")
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(susieInfo, forKey: "char5")
         defaults.set(georgeInfo, forKey: "char6")
         defaults.set(maryInfo, forKey: "char7")
+        defaults.set(larryInfo, forKey: "char8")
         defaults.set(charAvatarInfo, forKey: "charAvatarInfo")
         defaults.set("char1", forKey: "charToView")
         defaults.set("immigration", forKey: "searchView")

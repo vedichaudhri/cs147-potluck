@@ -10,9 +10,8 @@ import UIKit
 
 class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    let photos = ["LarryWilsonAvatar", "Character1QuestionPic1", ""]
+    let defaults = UserDefaults.standard
     
-    let labels = ["Larry", "First Day", ""]
     let lock = NSLock()
     
     //TODO: prettify this!!!! fill with more relevant info!!
@@ -42,6 +41,21 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
+        if indexPath.section == 0 {
+            newVC.charID = "char8"
+            defaults.set("char8", forKey: "charToView")
+        } else if indexPath.section == 1 {
+            newVC.charID = "char7"
+            defaults.set("char7", forKey: "charToView")
+        } else if indexPath.section == 2 {
+            newVC.charID = "char4"
+            defaults.set("char4", forKey: "charToView")
+        }
+        self.show(newVC, sender: self)
+    }
     
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
 //    {
@@ -67,7 +81,6 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         cell.photo.image = UIImage.init(named: imageName) //UIImage.init(named: photos[indexPath.row])
         if indexPath.row == 0 {
             cell.photo.contentMode = .scaleAspectFit
-            
         }
         lock.unlock()
         return cell
