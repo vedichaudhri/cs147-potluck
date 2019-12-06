@@ -19,13 +19,13 @@ class timelineTableViewCell: UITableViewCell {
 
 class RectangleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return (charInfo["timeline"] as! [[String]]).count 
     }
     
     let defaults = UserDefaults.standard
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let charInfo : [String:Any] = defaults.object(forKey: charName) as! [String : Any]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell") as! timelineTableViewCell
         let charTimeline = charInfo["timeline"] as! [[String]]
         cell.titleLabel.text = charTimeline[0][0]
@@ -35,6 +35,7 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     var charName: String = "char1"
+    var charInfo : [String:Any] = [:] //defaults.object(forKey: charName) as! [String : Any]
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
@@ -56,7 +57,7 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         charName = defaults.string(forKey: "charToView")!
-        let charInfo : [String:Any] = defaults.object(forKey: charName) as! [String : Any]
+        charInfo = defaults.object(forKey: charName) as! [String : Any]
         nameLabel.text = charInfo["firstName"] as! String + " " + (charInfo["lastName"] as! String)
         aboutLabel.text = "About " + (charInfo["firstName"] as! String)
         aboutDescription.text = charInfo["bio"] as? String
