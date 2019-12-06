@@ -16,6 +16,11 @@ class CharProfileViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
     }
+    
+//    let defaults = UserDefaults.standard
+//    var charInfo : [String:Any] = [:]
+//    var timelineInfo: [[String]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("@@@@@@@")
@@ -26,6 +31,9 @@ class CharProfileViewController: UIViewController {
         charAvatar.backgroundColor = UIColor.lightGray*/
 
 //        let image : UIImage
+        //charInfo = defaults.object(forKey: charID) as!  [String: Any] as! [String : Any]
+        //timelineInfo = charInfo["timeline"] as! [[String]]
+        //self.charAvatar =
         if charID == "char1" {
             self.charAvatar.image = #imageLiteral(resourceName: "onboarding3")
         } else if charID == "char2" {

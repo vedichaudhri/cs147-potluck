@@ -19,10 +19,10 @@ class timelineTableViewCell: UITableViewCell {
 
 class RectangleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (charInfo["timeline"] as! [[String]]).count 
+        return (charInfo["timeline"] as! [[String]]).count
     }
     
-    let defaults = UserDefaults.standard
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -34,9 +34,10 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    let defaults = UserDefaults.standard
     var charName: String = "char1"
-    var charInfo : [String:Any] = [:] //defaults.object(forKey: charName) as! [String : Any]
-    
+    var charInfo : [String:Any] = [:]
+    //var timelineInfo :
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var aboutDescription: UITextView!
