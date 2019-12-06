@@ -22,13 +22,20 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         return 1
     }
     
+    let defaults = UserDefaults.standard
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let charInfo : [String:Any] = defaults.object(forKey: charName) as! [String : Any]
         let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell") as! timelineTableViewCell
+        let charTimeline = charInfo["timeline"] as! [[String]]
+        cell.titleLabel.text = charTimeline[0][0]
+        cell.storyDescription.text = charTimeline[0][1]
+        cell.storyImage.image = UIImage(named: charTimeline[0][2])
         return cell
     }
     
     var charName: String = "char1"
-    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var aboutDescription: UITextView!

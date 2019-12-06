@@ -1715,7 +1715,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="365" height="443"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finally made time to prioritize myself" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-P6-Zld">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-P6-Zld">
                                                             <rect key="frame" x="22" y="21" width="278" height="56"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="278" id="eas-EX-q1o"/>
@@ -1725,18 +1725,17 @@
                                                             <color key="textColor" red="0.70980392160000005" green="0.37254901959999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apartment" translatesAutoresizingMaskIntoConstraints="NO" id="DL7-WF-A03">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DL7-WF-A03">
                                                             <rect key="frame" x="22" y="197" width="321" height="230"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="230" id="g3I-Bj-R8V"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-cg-gZM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-cg-gZM">
                                                             <rect key="frame" x="22" y="87" width="321" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="I1s-BC-0Ss"/>
                                                             </constraints>
-                                                            <string key="text">I think a common pitfall of the immigrant experience is that people work so incredibly hard to fit in, but then overlook themselves. I realized that it was time to change that. Last weekend, I told myself that it was now or never. With no plan and no backup, I took my backpack and left my apartmnent. It was time for a change.</string>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" white="0.24509489151917804" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -2072,7 +2071,6 @@
         <image name="TopLeft1Circle" width="315" height="177"/>
         <image name="TopRight2Circles" width="309" height="513"/>
         <image name="TopRightCircle" width="321" height="210"/>
-        <image name="apartment" width="6000" height="4000"/>
         <image name="newExplore" width="43" height="31"/>
         <image name="newHome" width="24" height="22"/>
         <image name="onboarding2" width="452" height="431"/>

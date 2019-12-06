@@ -33,12 +33,19 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
     }
     
     
+    
     @IBAction func postButtonPressed(_ sender: Any) {
         //TO DO: find a way to store this data :(((
         //let infoToStore = {charID: {"storyName":titleTextField.text}}
+
+        let story: [String] = [(titleTextField.text ?? ""), storyDescriptionTextView.text, ""]
         
-        //defaults.set(<#T##value: Any?##Any?#>, forKey: charID + "Stories")
-        
+        var charInfo = defaults.dictionary(forKey: charID)
+        var updatedTimeline: [[String]] = charInfo?["timeline"] as! [[String]]
+        updatedTimeline.insert(story, at: 0)
+        charInfo!["timeline"] = updatedTimeline
+        defaults.set(charInfo, forKey: charID)
+
         self.dismiss(animated: true, completion:nil)
     }
     

@@ -8,27 +8,37 @@
 
 import UIKit
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let defaults = UserDefaults.standard
-        let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":""]
+        let emptyTimeline: [[String]] = [[" ", " ", " "]]
+        let initInfo : [String:Any] = ["created":false, "firstName":"", "lastName":"", "gender":"", "age":"", "location":"", "bio":"", "timeline":emptyTimeline]
         let charAvatarInfo : [String:String] = ["char1":"SarahLamAvatar", "char2":"ZariaJonesAvatar", "char3":"SergioGarciaAvatar", "char4":"NelsonSandersAvatar", "char5":"SusisYongAvatar", "char6":"GeorgeTubbsAvatar", "char7":"MaryYuAvatar", "char8":"LarryWilsonAvatar"]
-
-        let nelsonInfo: [String: Any] = ["created":true, "firstName":"Nelson", "lastName":"Sanders", "gender":"M", "age":"42", "location":"New York", "bio":"Nelson grew up in Nigeria and moved to the States for university, where he studied computer science. He has been working in tech for over twenty years and currently lives in New York with his family."]
         
-        let susieInfo: [String: Any] = ["created":true, "firstName":"Susie", "lastName":"Young", "gender":"F", "age":"23", "location":"Laguna Beach", "bio":"Susie is a Korean-American born in Atlanta but raised in Laguna Beach. She just graduated from university and loves hiking, and playing with her two golden doodles."]
+        let nelsonTimeline: [[String]] = [["Made time to prioritize myself", "I think a common pitfall of the immigrant experience is that people work so incredibly hard to fit in, but then overlook themselves… ", "Character1StoryPic1"]]
+        let nelsonInfo: [String: Any] = ["created":true, "firstName":"Nelson", "lastName":"Sanders", "gender":"M", "age":"42", "location":"New York", "bio":"Nelson grew up in Nigeria and moved to the States for university, where he studied computer science. He has been working in tech for over twenty years and currently lives in New York with his family.", "timeline": nelsonTimeline]
         
-        let georgeInfo: [String: Any] = ["created":true, "firstName":"George", "lastName":"Tubbs", "gender":"M", "age":"20", "location":"Stanford", "bio":"George grew up in Trinidad and is currently a college athlete at Stanford University. He is passionate about running and hopes to be a professional athlete. He wants to be inspired by similar athletes that have achieved greatness."]
+        let susieTimeline: [[String]] = [["a", "b", "c"]]
         
-        let maryInfo: [String: Any] = ["created":true, "firstName":"Mary", "lastName":"Yu", "gender":"F", "age":"68", "location":"Seattle", "bio":"Mary grew up in Hong Kong and moved to the States after graduating unviersity with a degree in mechanical engineering. She worked for over thirty years as an engineer and is now happily retired. She lives with her husband and cat in Seattle."]
+        let susieInfo: [String: Any] = ["created":true, "firstName":"Susie", "lastName":"Young", "gender":"F", "age":"23", "location":"Laguna Beach", "bio":"Susie is a Korean-American born in Atlanta but raised in Laguna Beach. She just graduated from university and loves hiking, and playing with her two golden doodles.", "timeline":susieTimeline]
         
-        let larryInfo: [String: Any] = ["created":true, "firstName":"Larry", "lastName":"Wilson", "gender":"M", "age":"72", "location":"Redmond", "bio":"Larry recently retired from the construction industry, where he worked for over 40 years. He currently lives in Redmond but often flies to Ireland to visit his siblings. He enjoys long backpacking trips."]
+        let georgeTimeline: [[String]] = [["a", "b", "c"]]
+        
+        let georgeInfo: [String: Any] = ["created":true, "firstName":"George", "lastName":"Tubbs", "gender":"M", "age":"20", "location":"Stanford", "bio":"George grew up in Trinidad and is currently a college athlete at Stanford University. He is passionate about running and hopes to be a professional athlete. He wants to be inspired by similar athletes that have achieved greatness.", "timeline":georgeTimeline]
+        
+        let maryTimeline: [[String]] = [["a", "b", "c"]]
+        let maryInfo: [String: Any] = ["created":true, "firstName":"Mary", "lastName":"Yu", "gender":"F", "age":"68", "location":"Seattle", "bio":"Mary grew up in Hong Kong and moved to the States after graduating unviersity with a degree in mechanical engineering. She worked for over thirty years as an engineer and is now happily retired. She lives with her husband and cat in Seattle.", "timeline":maryTimeline]
+        
+        let larryTimeline: [[String]] = [["a", "b", "c"]]
+        let larryInfo: [String: Any] = ["created":true, "firstName":"Larry", "lastName":"Wilson", "gender":"M", "age":"72", "location":"Redmond", "bio":"Larry recently retired from the construction industry, where he worked for over 40 years. He currently lives in Redmond but often flies to Ireland to visit his siblings. He enjoys long backpacking trips.", "timeline":larryTimeline]
         
         defaults.set(initInfo, forKey: "char1")
         defaults.set(initInfo, forKey: "char2")

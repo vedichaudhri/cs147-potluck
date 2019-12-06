@@ -42,7 +42,7 @@ class CreateCharacterViewController: UIViewController {
     @IBAction func createChar(_ sender: Any) {
         let defaults = UserDefaults.standard
 //        let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text, "lastName":lastName.text, "gender":gender.text, "age":age.text, "location":location.text/*, "bio":bio.text*/]
-        let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text ?? "", "lastName":lastName.text ?? "", "gender":gender.text ?? "", "age":age.text ?? "", "location":location.text ?? "", "bio":bio.text]
+        let updatedInfo : [String:Any] = ["created":true, "firstName":firstName.text ?? "", "lastName":lastName.text ?? "", "gender":gender.text ?? "", "age":age.text ?? "", "location":location.text ?? "", "bio":bio.text, "timeline":[[" ", " ", " "]]]
         defaults.set(updatedInfo, forKey: charToCreate)
         self.dismiss(animated: true, completion:nil)
     }
