@@ -15,19 +15,6 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
     let labels = ["Larry", "First Day", ""]
     let lock = NSLock()
     
-    
-//    let photos2 = ["MaryYuAvatar", "Character4StoryPic1", ""]
-//
-//    let labels2 = ["Mary", "Grocery Shopping", "Making Kimchi"]
-//
-//    let photos3 =  ["ToddCheckAvatar", "", ""]
-//
-//    let labels3 = ["Todd", "", ""]
-//
-//    let char1Info = [["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "First Day"], ["Character4StoryPic1", "Grocery"]]
-//    let char2Info = [["MaryYuAvatar", "Mary"], ["Character4StoryPic1", "Groc"], ["MaryYuAvatar", "Marss"] ]
-    //let charInfo = [char1Info, char2Info]
-    
     //TODO: prettify this!!!! fill with more relevant info!!
     let charInfo = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "Negotiate salary"], ["art", "Art classes"],["Character4StoryPic1", "Groceries"]], [["MaryYuAvatar", "Mary"], ["kimchi", "Home cooking"], ["airport", "Visiting Korea"], ["apartment", "Housing crisis"]], [["NelsonSandersAvatar","Nelson"], ["school", "Son's school"], ["passport", "Renew passport"], ["Character1StoryPic1", "New foods"]]]
     

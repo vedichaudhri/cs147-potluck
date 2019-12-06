@@ -35,6 +35,15 @@ class CharProfileViewController: UIViewController {
         if charID == "char3" {
             self.charAvatar.image = #imageLiteral(resourceName: "SergioGarciaAvatar")
         }
+        if charID == "char4" {
+            self.charAvatar.image = UIImage(named: "NelsonSandersAvatar")
+        }
+        if charID == "char6" {
+            self.charAvatar.image = UIImage(named: "GeorgeTubbsAvatar")
+        }
+        if charID == "char7" {
+            self.charAvatar.image = UIImage(named: "MaryYuAvatar")
+        }
     
         // Do any additional setup after loading the view.
     }

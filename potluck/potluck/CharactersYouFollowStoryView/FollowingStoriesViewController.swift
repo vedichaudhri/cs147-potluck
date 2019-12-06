@@ -35,6 +35,8 @@ class FollowingStoriesTableViewCell: UITableViewCell {
 
 class FollowingStoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let defaults = UserDefaults.standard
+    
     let charNames: [String] = ["Nelson", "Mary", "George"]
     let charImages: [String] = ["NelsonSandersAvatar", "MaryYuAvatar", "GeorgeTubbsAvatar"]
     let storyTitles: [String] = ["Made time to prioritize myself", "Finding affordable housing in new city", "Getting ready for the race of a lifetime"]
@@ -59,6 +61,22 @@ class FollowingStoriesViewController: UIViewController, UITableViewDataSource, U
         cell.storyText.text = storyTexts[indexPath.section]
         cell.storyImage.image = UIImage.init(named: storyImages[indexPath.section])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
+        if indexPath.section == 0 {
+            newVC.charID = "char4"
+            defaults.set("char4", forKey: "charToView")
+        } else if indexPath.section == 1 {
+            newVC.charID = "char7"
+            defaults.set("char7", forKey: "charToView")
+        } else if indexPath.section == 2 {
+            newVC.charID = "char6"
+            defaults.set("char6", forKey: "charToView")
+        }
+        self.show(newVC, sender: self)
+
     }
     
 

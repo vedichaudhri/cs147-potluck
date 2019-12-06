@@ -16,6 +16,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //TODO: prettify this!!!
     let charInfo = [[["ToddCheckAvatar","Todd"], ["books", "International books"], ["burnout", "Work burnout"],["visa", "Travel visa"]], [["SusisYongAvatar", "Susie"], ["immigration", "Immigration process"], ["finance", "Personal finance"], ["grad", "PhD programs"]], [["GeorgeTubbsAvatar","George"], ["travel", "Travel tips"], ["job", "Help with job search"],["health", "Health insurance"]]]
     
+    // after search
+    let charInfoAfter = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "Negotiate salary"], ["art", "Art classes"],["Character4StoryPic1", "Groceries"]], [["MaryYuAvatar", "Mary"], ["kimchi", "Home cooking"], ["airport", "Visiting Korea"], ["apartment", "Housing crisis"]], [["NelsonSandersAvatar","Nelson"], ["school", "Son's school"], ["passport", "Renew passport"], ["Character1StoryPic1", "New foods"]]]
+    
     var sectionNum = 0
     let lock = NSLock()
     
@@ -69,6 +72,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchView = defaults.object(forKey: "searchView") as! String
         tableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
    
