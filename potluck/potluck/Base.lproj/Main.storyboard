@@ -1707,7 +1707,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell a Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z6-gF-wUW">
-                                        <rect key="frame" x="19" y="210" width="102" height="24"/>
+                                        <rect key="frame" x="19" y="206.5" width="102" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1718,24 +1718,24 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-ba-NcP">
-                                        <rect key="frame" x="19" y="120" width="330" height="70"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-ba-NcP">
+                                        <rect key="frame" x="19" y="120" width="328" height="66.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="aSq-24-csc"/>
-                                            <constraint firstAttribute="width" constant="330" id="oRQ-5p-6jZ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="aSq-24-csc"/>
+                                            <constraint firstAttribute="width" constant="328" id="k0e-3z-E43"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oQ-dV-3Tv">
-                                        <rect key="frame" x="19" y="242" width="330" height="72"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oQ-dV-3Tv">
+                                        <rect key="frame" x="19" y="239" width="328" height="72"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="iDd-Nu-l3O"/>
-                                            <constraint firstAttribute="width" constant="330" id="lni-qs-CXd"/>
+                                            <constraint firstAttribute="width" constant="328" id="lni-qs-CXd"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1743,7 +1743,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="402" estimatedRowHeight="-1" sectionHeaderHeight="100" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-O4-Df4">
-                                        <rect key="frame" x="0.0" y="411" width="365" height="567"/>
+                                        <rect key="frame" x="0.0" y="407.5" width="365" height="567"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timelineCell" rowHeight="402" id="Lo4-eQ-Y9y" customClass="timelineTableViewCell" customModule="potluck" customModuleProvider="target">
@@ -1810,13 +1810,13 @@
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-Oc-9DN">
-                                        <rect key="frame" x="19" y="377" width="78" height="24"/>
+                                        <rect key="frame" x="19" y="373.5" width="78" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-1Z-rlC">
-                                        <rect key="frame" x="265" y="324" width="84" height="33"/>
+                                        <rect key="frame" x="265" y="320.5" width="84" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="tIb-dq-ww7"/>
                                             <constraint firstAttribute="width" constant="84" id="vTo-cy-WF5"/>
@@ -1835,14 +1835,12 @@
                                     <constraint firstItem="1we-Rm-D1s" firstAttribute="centerX" secondItem="HRS-RE-ECB" secondAttribute="centerX" id="C4x-E6-Eb3"/>
                                     <constraint firstItem="9oQ-dV-3Tv" firstAttribute="top" secondItem="0z6-gF-wUW" secondAttribute="bottom" constant="8" id="HqP-7r-SSd"/>
                                     <constraint firstAttribute="bottom" secondItem="SiU-ba-NcP" secondAttribute="bottom" constant="830" id="JwC-Lu-Fvs"/>
-                                    <constraint firstItem="SiU-ba-NcP" firstAttribute="leading" secondItem="HRS-RE-ECB" secondAttribute="leading" constant="19" id="LsU-ds-yJZ"/>
                                     <constraint firstItem="0z6-gF-wUW" firstAttribute="top" secondItem="SiU-ba-NcP" secondAttribute="bottom" constant="20" id="RNZ-tD-nAR"/>
                                     <constraint firstAttribute="bottom" secondItem="6Iy-O4-Df4" secondAttribute="bottom" constant="42" id="RRE-Xw-zxg"/>
                                     <constraint firstItem="6Iy-O4-Df4" firstAttribute="centerX" secondItem="1we-Rm-D1s" secondAttribute="centerX" id="S96-ZI-v4h"/>
                                     <constraint firstItem="0z6-gF-wUW" firstAttribute="leading" secondItem="HRS-RE-ECB" secondAttribute="leading" constant="19" id="ZIT-wT-riS"/>
                                     <constraint firstItem="pVf-9Y-738" firstAttribute="top" secondItem="1we-Rm-D1s" secondAttribute="bottom" constant="27" id="ZV5-FG-ead"/>
                                     <constraint firstItem="4A9-1Z-rlC" firstAttribute="top" secondItem="9oQ-dV-3Tv" secondAttribute="bottom" constant="10" id="g5M-l5-OL0"/>
-                                    <constraint firstItem="9oQ-dV-3Tv" firstAttribute="leading" secondItem="HRS-RE-ECB" secondAttribute="leading" constant="19" id="iBR-Zi-ZTk"/>
                                     <constraint firstItem="6Iy-O4-Df4" firstAttribute="top" secondItem="4TC-Oc-9DN" secondAttribute="bottom" constant="10" id="oib-Eb-cGa"/>
                                     <constraint firstItem="pVf-9Y-738" firstAttribute="leading" secondItem="HRS-RE-ECB" secondAttribute="leading" constant="19" id="qdX-za-bne"/>
                                     <constraint firstItem="4TC-Oc-9DN" firstAttribute="leading" secondItem="HRS-RE-ECB" secondAttribute="leading" constant="19" id="tUk-gE-SQD"/>
@@ -1855,8 +1853,10 @@
                         <color key="backgroundColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HRS-RE-ECB" firstAttribute="trailing" secondItem="9gs-eG-ZES" secondAttribute="trailing" constant="-5" id="1b9-mD-4PK"/>
+                            <constraint firstItem="SiU-ba-NcP" firstAttribute="leading" secondItem="9gs-eG-ZES" secondAttribute="leading" constant="24" id="E9H-Dl-wZz"/>
                             <constraint firstItem="HRS-RE-ECB" firstAttribute="leading" secondItem="9gs-eG-ZES" secondAttribute="leading" constant="5" id="L1l-fz-dE0"/>
                             <constraint firstItem="HRS-RE-ECB" firstAttribute="top" secondItem="SoG-86-hI7" secondAttribute="top" id="dS5-h9-hD3"/>
+                            <constraint firstItem="9oQ-dV-3Tv" firstAttribute="leading" secondItem="9gs-eG-ZES" secondAttribute="leading" constant="24" id="iMZ-5m-dBH"/>
                             <constraint firstItem="HRS-RE-ECB" firstAttribute="top" secondItem="SoG-86-hI7" secondAttribute="top" id="wif-2R-pRL"/>
                             <constraint firstItem="HRS-RE-ECB" firstAttribute="bottom" secondItem="9gs-eG-ZES" secondAttribute="bottom" id="yIE-66-2Tn"/>
                         </constraints>

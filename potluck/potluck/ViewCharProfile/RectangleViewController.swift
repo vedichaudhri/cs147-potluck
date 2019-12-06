@@ -69,7 +69,12 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         nameLabel.text = charInfo["firstName"] as! String + " " + (charInfo["lastName"] as! String)
         aboutLabel.text = "About " + (charInfo["firstName"] as! String)
         aboutDescription.text = charInfo["bio"] as? String
+        var frame = self.aboutDescription.frame
+        frame.size.height = self.aboutDescription.contentSize.height
+        self.aboutDescription.frame = frame
+        
         tellAStroyDescription.text = "Add to " + (charInfo["firstName"] as! String) + "'s timeline by telling a story that builds the character."
+        timelineTableView.separatorStyle = .none
     }
     
     override func viewDidAppear(_ animated: Bool) {
