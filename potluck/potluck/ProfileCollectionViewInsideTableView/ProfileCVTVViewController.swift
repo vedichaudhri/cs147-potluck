@@ -42,7 +42,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
  
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
         if indexPath.section == 0 {
             newVC.charID = "char8"
@@ -55,7 +55,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
             defaults.set("char4", forKey: "charToView")
         }
         self.show(newVC, sender: self)
-    }
+    }*/
     
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
 //    {
@@ -77,6 +77,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCVTVCollectionViewCell", for: indexPath) as! ProfileCVTVCollectionViewCell
         cell.label.text = charInfo[self.sectionNum][indexPath.row][1]
+        cell.tag = self.sectionNum
         let imageName = charInfo[self.sectionNum][indexPath.row][0]
         cell.photo.image = UIImage.init(named: imageName) //UIImage.init(named: photos[indexPath.row])
         if indexPath.row == 0 {
@@ -84,6 +85,27 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
         }
         lock.unlock()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /*print("********")
+        print(indexPath.section)
+        print(indexPath.row)
+        print(collectionView.cellForItem(at: indexPath)?.tag)
+        print("*******")*/
+        let cellTag = collectionView.cellForItem(at: indexPath)?.tag
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "characterProfile") as! CharProfileViewController
+        if cellTag == 0 {
+            newVC.charID = "char8"
+            defaults.set("char8", forKey: "charToView")
+        } else if cellTag == 1 {
+            newVC.charID = "char7"
+            defaults.set("char7", forKey: "charToView")
+        } else if cellTag == 2 {
+            newVC.charID = "char4"
+            defaults.set("char4", forKey: "charToView")
+        }
+        self.show(newVC, sender: self)
     }
     
 
