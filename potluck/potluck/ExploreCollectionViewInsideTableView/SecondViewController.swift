@@ -90,9 +90,19 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    @IBOutlet weak var workContainerView: UIView!
     
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image1: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        workContainerView.isHidden = true
+        label2.isHidden = true
+        label1.isHidden = true
+        image1.isHidden = true
+        image2.isHidden = true
         print("@@@@@@@")
         print(defaults.object(forKey: "searchView"))
         print("@@@@@@@")
@@ -115,6 +125,39 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         print("^^^^^^^")
         searchView = defaults.object(forKey: "searchView") as! String
         //tableView.reloadData()
+        /*if self.searchView == "immigration" {
+            self.tableView.isHidden = false
+            self.workContainerView.isHidden = true
+            self.label2.isHidden = true
+            self.label1.isHidden = true
+            self.image1.isHidden = true
+            self.image2.isHidden = true
+        }*/
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            //Here call your function
+            //If you want to do changes in UI use this
+            DispatchQueue.main.async(execute: {
+                //Update UI
+                self.searchView = self.defaults.object(forKey: "searchView") as! String
+                if self.searchView == "work" {
+                    self.tableView.isHidden = true
+                    self.workContainerView.isHidden = false
+                    self.label2.isHidden = false
+                    self.label1.isHidden = false
+                    self.image1.isHidden = false
+                    self.image2.isHidden = false
+                    
+                } else {
+                    self.tableView.isHidden = false
+                    self.workContainerView.isHidden = true
+                    self.label2.isHidden = true
+                    self.label1.isHidden = true
+                    self.image1.isHidden = true
+                    self.image2.isHidden = true
+                }
+            })
+        }
+        
     }
 
    

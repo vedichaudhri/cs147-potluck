@@ -83,6 +83,7 @@ class FollowingStoriesViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         followingTableView.separatorColor = UIColor.clear
+        //UserDefaults.standard.set("immigration", forKey: "searchView")
 //        followingStoriesTableView.reloadData()
 
         // Do any additional setup after loading the view.

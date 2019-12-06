@@ -12,7 +12,7 @@ import UIKit
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let defaults = UserDefaults.standard
-    let tableViewData = ["How to deal with the immigration office?", "Staying in touch with lost relatives", "Misunderstood at work"]
+    let tableViewData = [/*"How to deal with the immigration office?", "Staying in touch with lost relatives",*/ "Misunderstood at work"]
     var showSearch: Bool = false
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +42,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         defaults.set("work", forKey: "searchView")
-        print("++++++++++++")
+        /*print("++++++++++++")
         print(defaults.object(forKey: "searchView"))
-        print("++++++++++++")
+        print("++++++++++++")*/
         self.dismiss(animated: true, completion:nil)
     }
     
