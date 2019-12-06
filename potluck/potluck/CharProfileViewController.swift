@@ -40,6 +40,8 @@ class CharProfileViewController: UIViewController {
             self.charAvatar.image = UIImage(named: "GeorgeTubbsAvatar")
         } else if charID == "char7" {
             self.charAvatar.image = UIImage(named: "MaryYuAvatar")
+        } else if charID == "char8" {
+            self.charAvatar.image = UIImage(named: "LarryWilsonAvatar")
         }
     
         // Do any additional setup after loading the view.
