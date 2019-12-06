@@ -52,6 +52,7 @@ class CharactersFollowedStoryViewController: UIViewController, UICollectionViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //UserDefaults.standard.set("immigration", forKey: "searchView")
 
         // Do any additional setup after loading the view.
     }

@@ -79,6 +79,7 @@ class ProfileCVTVViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = UIColor.clear
+        UserDefaults.standard.set("immigration", forKey: "searchView")
         
         // Do any additional setup after loading the view.
     }
