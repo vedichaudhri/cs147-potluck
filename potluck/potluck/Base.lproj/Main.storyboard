@@ -1742,15 +1742,15 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="337" estimatedRowHeight="-1" sectionHeaderHeight="100" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-O4-Df4">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="353" estimatedRowHeight="-1" sectionHeaderHeight="100" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-O4-Df4">
                                         <rect key="frame" x="0.0" y="411" width="365" height="567"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timelineCell" rowHeight="337" id="Lo4-eQ-Y9y" customClass="timelineTableViewCell" customModule="potluck" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="100" width="365" height="337"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timelineCell" rowHeight="353" id="Lo4-eQ-Y9y" customClass="timelineTableViewCell" customModule="potluck" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="365" height="353"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lo4-eQ-Y9y" id="gI5-sz-7mU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="336.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="352.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-P6-Zld">
@@ -1774,6 +1774,13 @@
                                                             <color key="textColor" white="0.24509489151917804" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReplyButton" translatesAutoresizingMaskIntoConstraints="NO" id="Mic-ub-cGW">
+                                                            <rect key="frame" x="270" y="299.5" width="84" height="33"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="33" id="9w1-9t-DZf"/>
+                                                                <constraint firstAttribute="width" constant="84" id="ZNX-hc-4BZ"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="ETO-cg-gZM" firstAttribute="top" secondItem="lXf-P6-Zld" secondAttribute="bottom" constant="5" id="61K-F0-2nb"/>
@@ -1784,10 +1791,13 @@
                                                         <constraint firstItem="ETO-cg-gZM" firstAttribute="leading" secondItem="gI5-sz-7mU" secondAttribute="leading" constant="22" id="Z7s-SR-IX4"/>
                                                         <constraint firstItem="lXf-P6-Zld" firstAttribute="top" secondItem="gI5-sz-7mU" secondAttribute="topMargin" constant="10" id="dBU-kZ-31h"/>
                                                         <constraint firstAttribute="trailing" secondItem="DL7-WF-A03" secondAttribute="trailing" constant="22" id="dCQ-IN-rLX"/>
+                                                        <constraint firstItem="Mic-ub-cGW" firstAttribute="top" secondItem="ETO-cg-gZM" secondAttribute="bottom" constant="235" id="iDi-Wi-wha"/>
+                                                        <constraint firstItem="Mic-ub-cGW" firstAttribute="leading" secondItem="gI5-sz-7mU" secondAttribute="leading" constant="270" id="rKw-w2-QtN"/>
                                                         <constraint firstItem="DL7-WF-A03" firstAttribute="top" secondItem="ETO-cg-gZM" secondAttribute="bottom" constant="15" id="rp2-5M-RyU"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="replyImage" destination="Mic-ub-cGW" id="EZk-1j-hx7"/>
                                                     <outlet property="storyDescription" destination="ETO-cg-gZM" id="8cI-ch-tMm"/>
                                                     <outlet property="storyImage" destination="DL7-WF-A03" id="cQa-SC-CC1"/>
                                                     <outlet property="titleLabel" destination="lXf-P6-Zld" id="cab-De-TxC"/>
@@ -2113,6 +2123,7 @@
         <image name="LarryWilsonAvatar" width="88" height="94"/>
         <image name="NotificationsButton" width="21" height="23"/>
         <image name="PostButton" width="84" height="35.666667938232422"/>
+        <image name="ReplyButton" width="84" height="35.666667938232422"/>
         <image name="Screen Shot 2019-11-06 at 8.08.10 AM" width="98" height="94"/>
         <image name="SearchButton" width="23.333333969116211" height="23.333333969116211"/>
         <image name="TopLeft1Circle" width="105" height="59"/>

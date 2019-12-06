@@ -14,6 +14,9 @@ class timelineTableViewCell: UITableViewCell {
     
     @IBOutlet weak var storyDescription: UILabel!
     
+    @IBOutlet weak var replyImage: UIImageView!
+    
+    //@IBOutlet weak var replyButton: UIButton!
     @IBOutlet weak var storyImage: UIImageView!
 }
 
@@ -31,6 +34,10 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.titleLabel.text = charTimeline[indexPath.row][0]
         cell.storyDescription.text = charTimeline[indexPath.row][1]
         cell.storyImage.image = UIImage(named: charTimeline[indexPath.row][2])
+        cell.replyImage.isHidden = true
+        if indexPath.row == 0 {
+            cell.replyImage.isHidden = false
+        }
         return cell
     }
     
