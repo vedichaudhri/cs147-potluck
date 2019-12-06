@@ -18,6 +18,8 @@ class timelineTableViewCell: UITableViewCell {
     
     //@IBOutlet weak var replyButton: UIButton!
     @IBOutlet weak var storyImage: UIImageView!
+
+    
 }
 
 class RectangleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -38,6 +40,11 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.row == 0 {
             cell.replyImage.isHidden = false
         }
+        cell.storyDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.storyDescription.sizeToFit()
+        /*var otherFrame = cell.storyDescription.frame
+        otherFrame.size.height = cell.storyDescription.expec
+        cell.storyDescription.frame.height*/
         return cell
     }
     
@@ -72,6 +79,8 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         var frame = self.aboutDescription.frame
         frame.size.height = self.aboutDescription.contentSize.height
         self.aboutDescription.frame = frame
+        
+        
         
         tellAStroyDescription.text = "Add to " + (charInfo["firstName"] as! String) + "'s timeline by telling a story that builds the character."
         timelineTableView.separatorStyle = .none
