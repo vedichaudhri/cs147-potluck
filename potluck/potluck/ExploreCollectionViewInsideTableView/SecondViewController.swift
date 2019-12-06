@@ -14,7 +14,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var searchView = "immigration"
     
     //TODO: prettify this!!!
-    let charInfo = [[["ToddCheckAvatar","Todd"], ["books", "International books"], ["burnout", "Work burnout"],["visa", "Travel visa"]], [["SusisYongAvatar", "Susie"], ["immigration", "Immigration process"], ["finance", "Personal finance"], ["grad", "PhD programs"]], [["GeorgeTubbsAvatar","George"], ["travel", "Travel tips"], ["job", "Help with job search"],["health", "Health insurance"]]]
+    let immigrationInfo = [[["ToddCheckAvatar","Todd"], ["books", "International books"], ["burnout", "Work burnout"],["visa", "Travel visa"]], [["SusisYongAvatar", "Susie"], ["immigration", "Immigration process"], ["finance", "Personal finance"], ["grad", "PhD programs"]], [["GeorgeTubbsAvatar","George"], ["travel", "Travel tips"], ["job", "Help with job search"],["health", "Health insurance"]]]
+    
+    let workInfo = [[["LarryWilsonAvatar","Larry"], ["Character1QuestionPic1", "Negotiate salary"], ["art", "Art classes"],["Character4StoryPic1", "Groceries"]], [["MaryYuAvatar", "Mary"], ["kimchi", "Home cooking"], ["airport", "Visiting Korea"], ["apartment", "Housing crisis"]], [["NelsonSandersAvatar","Nelson"], ["school", "Son's school"], ["passport", "Renew passport"], ["Character1StoryPic1", "New foods"]]]
     
     var sectionNum = 0
     let lock = NSLock()
@@ -31,14 +33,22 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return charInfo.count
+        if searchView == "immigration" {
+            return immigrationInfo.count
+        } else {
+            return workInfo.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //TODO: edit based on "search view"
+        
+        //        print("!!!!!!!!")
+        //        print("Section: " + String(indexPath.section) + " Row: " + String(indexPath.row) )
+        //        print("!!!!!!!!")
         let cell = tableView.dequeueReusableCell(withIdentifier: "CVTVTableViewCell") as! CVTVTableViewCell
         lock.lock()
-        sectionNum = indexPath.section
+        self.sectionNum = indexPath.section
         return cell
     }
     
@@ -51,13 +61,27 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        //        let  num = self.sectionNum
+        //index(ofAccessibilityElement: collectionView)
+        //        print("*********")
+        //        print("Section: " + String(indexPath.section) + " Row: " + String(indexPath.row) + " num: " + String(num))
+        //        print("*********")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVTVCollectionViewCell", for: indexPath) as! CVTVCollectionViewCell
-        cell.label.text = charInfo[self.sectionNum][indexPath.row][1]
-        let imageName = charInfo[self.sectionNum][indexPath.row][0]
-        cell.photo.image = UIImage.init(named: imageName)
-        if indexPath.row == 0 {
-            cell.photo.contentMode = .scaleAspectFit
-            
+        if searchView == "immigration" {
+            cell.label.text = immigrationInfo[self.sectionNum][indexPath.row][1]
+            let imageName = immigrationInfo[self.sectionNum][indexPath.row][0]
+            cell.photo.image = UIImage.init(named: imageName)
+            if indexPath.row == 0 {
+                cell.photo.contentMode = .scaleAspectFit
+            }
+        } else {
+            cell.label.text = workInfo[self.sectionNum][indexPath.row][1]
+            let imageName = workInfo[self.sectionNum][indexPath.row][0]
+            cell.photo.image = UIImage.init(named: imageName)
+            if indexPath.row == 0 {
+                cell.photo.contentMode = .scaleAspectFit
+            }
         }
         lock.unlock()
         return cell
@@ -66,9 +90,28 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("@@@@@@@")
+        print(defaults.object(forKey: "searchView"))
+        print("@@@@@@@")
         searchView = defaults.object(forKey: "searchView") as! String
         tableView.separatorColor = UIColor.clear
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    /*override func viewWillAppear(_ animated: Bool) {
+        print("^^^^^^^")
+        print(defaults.object(forKey: "searchView"))
+        print("^^^^^^^")
+        searchView = defaults.object(forKey: "searchView") as! String
+        tableView.reloadData()
+    }*/
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("^^^^^^^")
+        print(defaults.object(forKey: "searchView"))
+        print("^^^^^^^")
+        searchView = defaults.object(forKey: "searchView") as! String
+        //tableView.reloadData()
     }
 
    

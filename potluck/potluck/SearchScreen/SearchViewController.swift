@@ -42,6 +42,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         defaults.set("work", forKey: "searchView")
+        print("++++++++++++")
+        print(defaults.object(forKey: "searchView"))
+        print("++++++++++++")
         self.dismiss(animated: true, completion:nil)
     }
     
