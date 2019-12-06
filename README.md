@@ -2,7 +2,7 @@
 
 Operating Instructions
 
-This prototyped was developed for the iPhone X using Swift. To run the prototype, you must first have XCode downloaded. This prototype works best with version 12.1. 
+This prototype was developed for the iPhone X using Swift. To run the prototype, you must first have XCode downloaded. This prototype works best with version 12.1. 
 1. Download .zip file of the project
 2. Unzip the file and click the unzipped folder “cs147-potluck-master”
 3. Navigate to the folder “potluck”
@@ -11,4 +11,4 @@ This prototyped was developed for the iPhone X using Swift. To run the prototype
 6. Click the run/play button at the upper right hand corner of the screen
 
 
-For more information, check out our website at http://web.stanford.edu/class/cs147/projects/OnlineLocalCommunity/Potluck/index.html
+For more information about our team and design process, check out our website at http://web.stanford.edu/class/cs147/projects/OnlineLocalCommunity/Potluck/index.html
