@@ -17,6 +17,9 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
     @IBOutlet weak var ageTextField: UITextField!
     var charID: String = ""
     let defaults = UserDefaults.standard
+    let queue = DispatchQueue(label: "test")
+//    var charInfo : [String:Any] = [:]
+//    var timelineInfo: [[String]] = []
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
@@ -32,21 +35,32 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
         attchmentTextField.text = "File added successfully"
     }
     
-    
-    
     @IBAction func postButtonPressed(_ sender: Any) {
         //TO DO: find a way to store this data :(((
         //let infoToStore = {charID: {"storyName":titleTextField.text}}
-
-        let story: [String] = [(titleTextField.text ?? ""), storyDescriptionTextView.text, ""]
-        
-        var charInfo = defaults.dictionary(forKey: charID)
-        var updatedTimeline: [[String]] = charInfo?["timeline"] as! [[String]]
-        updatedTimeline.insert(story, at: 0)
-        charInfo!["timeline"] = updatedTimeline
-        defaults.set(charInfo, forKey: charID)
-
-        self.dismiss(animated: true, completion:nil)
+        queue.async {
+            print("&&&&&&&&&")
+            let story: [String] = [(self.titleTextField.text ?? ""), self.storyDescriptionTextView.text, ""]
+            
+            var charInfo = self.defaults.dictionary(forKey: self.charID)
+            var updatedTimeline: [[String]] = charInfo?["timeline"] as! [[String]]
+            updatedTimeline.insert(story, at: 0)
+            charInfo!["timeline"] = updatedTimeline
+            self.defaults.set(charInfo, forKey: self.charID)
+            let newInfo = self.defaults.object(forKey: self.charID) as! [String : Any]
+            print(newInfo["timeline"] as Any)
+            print("&&&&&&&&&")
+            self.dismiss(animated: true, completion:nil)
+        }
+//        let story: [String] = [(titleTextField.text ?? ""), storyDescriptionTextView.text, ""]
+//
+//        var charInfo = defaults.dictionary(forKey: charID)
+//        var updatedTimeline: [[String]] = charInfo?["timeline"] as! [[String]]
+//        updatedTimeline.insert(story, at: 0)
+//        charInfo!["timeline"] = updatedTimeline
+//        defaults.set(charInfo, forKey: charID)
+//
+//        self.dismiss(animated: true, completion:nil)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -57,11 +71,11 @@ class AddStoryViewController: UIViewController,  UITextViewDelegate {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         charID = defaults.string(forKey: "charToView")!
-        let charInfo : [String:Any] = defaults.object(forKey: charID) as! [String : Any]
+        let charInfo = defaults.object(forKey: charID) as! [String : Any]
+//        timelineInfo = charInfo["timeline"] as! [[String]]
         nameLabel.text = charInfo["firstName"] as? String /*+ " " + (charInfo["lastName"] as! String)*/
         let charAvatarInfo = UserDefaults.standard.object(forKey: "charAvatarInfo") as! [String:String]
         let imageName = charAvatarInfo[charID]

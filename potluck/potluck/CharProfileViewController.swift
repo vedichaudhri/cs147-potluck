@@ -17,9 +17,7 @@ class CharProfileViewController: UIViewController {
         self.dismiss(animated: true, completion:nil)
     }
     
-//    let defaults = UserDefaults.standard
-//    var charInfo : [String:Any] = [:]
-//    var timelineInfo: [[String]] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

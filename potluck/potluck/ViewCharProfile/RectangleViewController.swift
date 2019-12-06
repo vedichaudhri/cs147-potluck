@@ -28,9 +28,9 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell") as! timelineTableViewCell
         let charTimeline = charInfo["timeline"] as! [[String]]
-        cell.titleLabel.text = charTimeline[0][0]
-        cell.storyDescription.text = charTimeline[0][1]
-        cell.storyImage.image = UIImage(named: charTimeline[0][2])
+        cell.titleLabel.text = charTimeline[indexPath.row][0]
+        cell.storyDescription.text = charTimeline[indexPath.row][1]
+        cell.storyImage.image = UIImage(named: charTimeline[indexPath.row][2])
         return cell
     }
     
@@ -63,6 +63,15 @@ class RectangleViewController: UIViewController, UITableViewDelegate, UITableVie
         aboutLabel.text = "About " + (charInfo["firstName"] as! String)
         aboutDescription.text = charInfo["bio"] as? String
         tellAStroyDescription.text = "Add to " + (charInfo["firstName"] as! String) + "'s timeline by telling a story that builds the character."
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("appear$$$$$$$$$")
+        charInfo = defaults.object(forKey: charName) as! [String : Any]
+        
+        print(charInfo["timeline"] as Any)
+        
+        timelineTableView.reloadData()
     }
     
 

@@ -39,13 +39,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         //return UITableViewCell()
     }
     
+    let queue = DispatchQueue(label: "test2")
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        defaults.set("work", forKey: "searchView")
-        /*print("++++++++++++")
-        print(defaults.object(forKey: "searchView"))
-        print("++++++++++++")*/
-        self.dismiss(animated: true, completion:nil)
+        queue.async {
+            self.defaults.set("work", forKey: "searchView")
+            print("++++++++++++")
+            print(self.defaults.object(forKey: "searchView"))
+            print("++++++++++++")
+            self.dismiss(animated: true, completion:nil)
+        }
     }
     
 
